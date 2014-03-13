@@ -8,25 +8,25 @@ http://accessibleculture.org/research-files/aria-tabs/version3b.php
 
 ```html
 <div id="tabs">
-	<ul>
-		<li><a href="#first">First Tab</a></li>
-		<li><a href="#second">Second Tab</a></li>
-		<li><a href="#third">Third Tab</a></li>
-	</ul>
-	<div>
-		<h2 id="first">First Tab's Main Heading</h2>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur blandit tellus nec turpis. In at sem. Nunc tempus sem. Morbi tincidunt diam vitae purus. Nulla facilisi. Curabitur facilisis ligula ut dui. Vivamus placerat, <a href="#">libero ut convallis elementum</a>, urna nisi nonummy libero, eu porttitor ante neque eu nulla.</p>
-		<p>Quisque ac velit. Phasellus ac eros in sapien <a href="#">congue elementum</a>. Donec vitae massa vitae magna rutrum placerat. Vestibulum tortor. Cras vitae justo at nisi commodo euismod.</p>
-	</div>
-	<div>
-		<h2 id="second">Second Tab's Main Heading</h2>
-		<p>Aliquam vehicula justo ut metus. <a href="#">Maecenas sollicitudin</a>, leo vel eleifend consectetuer, ligula magna hendrerit massa, a facilisis eros tellus non arcu. Quisque pulvinar, metus sed ullamcorper lacinia, nulla nibh consequat libero, ac nonummy quam diam ut neque. Suspendisse interdum lacinia nulla.</p>
-	<p>Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. <a href="#">Phasellus metus nibh</a>, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
-	</div>
-	<div>
-		<h2 id="third">Third Tab's Main Heading</h2>
-		<p>Sed ut lectus in tellus blandit dapibus. <a href="#">Mauris elit quam</a>, fringilla vel, luctus eu, molestie sit amet, diam. Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. Phasellus metus nibh, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
-	</div>
+  <ul>
+    <li><a href="#first">First Tab</a></li>
+    <li><a href="#second">Second Tab</a></li>
+    <li><a href="#third">Third Tab</a></li>
+  </ul>
+  <div>
+    <h2 id="first">First Tab's Main Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur blandit tellus nec turpis. In at sem. Nunc tempus sem. Morbi tincidunt diam vitae purus. Nulla facilisi. Curabitur facilisis ligula ut dui. Vivamus placerat, <a href="#">libero ut convallis elementum</a>, urna nisi nonummy libero, eu porttitor ante neque eu nulla.</p>
+    <p>Quisque ac velit. Phasellus ac eros in sapien <a href="#">congue elementum</a>. Donec vitae massa vitae magna rutrum placerat. Vestibulum tortor. Cras vitae justo at nisi commodo euismod.</p>
+  </div>
+  <div>
+    <h2 id="second">Second Tab's Main Heading</h2>
+    <p>Aliquam vehicula justo ut metus. <a href="#">Maecenas sollicitudin</a>, leo vel eleifend consectetuer, ligula magna hendrerit massa, a facilisis eros tellus non arcu. Quisque pulvinar, metus sed ullamcorper lacinia, nulla nibh consequat libero, ac nonummy quam diam ut neque. Suspendisse interdum lacinia nulla.</p>
+  <p>Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. <a href="#">Phasellus metus nibh</a>, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+  </div>
+  <div>
+    <h2 id="third">Third Tab's Main Heading</h2>
+    <p>Sed ut lectus in tellus blandit dapibus. <a href="#">Mauris elit quam</a>, fringilla vel, luctus eu, molestie sit amet, diam. Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. Phasellus metus nibh, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+  </div>
 </div>
 ```
 
@@ -34,25 +34,25 @@ http://accessibleculture.org/research-files/aria-tabs/version3b.php
 
 ```html
 <div id="tabs">
-	<ul class="tabsList" role="tablist">
-		<li role="presentation" class="current"><a href="#first" id="tab-first" role="tab" aria-selected="true" tabindex="0">First Tab</a></li>
-		<li role="presentation" class=""><a href="#second" id="tab-second" role="tab" aria-selected="false" tabindex="-1">Second Tab</a></li>
-		<li role="presentation" class=""><a href="#third" id="tab-third" role="tab" aria-selected="false" tabindex="-1">Third Tab</a></li>
-	</ul>
-	<div class="tabPanel" role="tabpanel" aria-hidden="false" tabindex="0" aria-labelledby="tab-first" style="display: block;">
-		<h2 id="first">First Tab's Main Heading</h2>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur blandit tellus nec turpis. In at sem. Nunc tempus sem. Morbi tincidunt diam vitae purus. Nulla facilisi. Curabitur facilisis ligula ut dui. Vivamus placerat, <a href="#">libero ut convallis elementum</a>, urna nisi nonummy libero, eu porttitor ante neque eu nulla.</p>
-		<p>Quisque ac velit. Phasellus ac eros in sapien <a href="#">congue elementum</a>. Donec vitae massa vitae magna rutrum placerat. Vestibulum tortor. Cras vitae justo at nisi commodo euismod.</p>
-	</div>
-	<div class="tabPanel" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="tab-second" style="display: none;">
-		<h2 id="second">Second Tab's Main Heading</h2>
-		<p>Aliquam vehicula justo ut metus. <a href="#">Maecenas sollicitudin</a>, leo vel eleifend consectetuer, ligula magna hendrerit massa, a facilisis eros tellus non arcu. Quisque pulvinar, metus sed ullamcorper lacinia, nulla nibh consequat libero, ac nonummy quam diam ut neque. Suspendisse interdum lacinia nulla.</p>
-	<p>Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. <a href="#">Phasellus metus nibh</a>, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
-	</div>
-	<div class="tabPanel" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="tab-third" style="display: none;">
-		<h2 id="third">Third Tab's Main Heading</h2>
-		<p>Sed ut lectus in tellus blandit dapibus. <a href="#">Mauris elit quam</a>, fringilla vel, luctus eu, molestie sit amet, diam. Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. Phasellus metus nibh, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
-	</div>
+  <ul class="tabsList" role="tablist">
+    <li role="presentation" class="current"><a href="#first" id="tab-first" role="tab" aria-selected="true" tabindex="0">First Tab</a></li>
+    <li role="presentation" class=""><a href="#second" id="tab-second" role="tab" aria-selected="false" tabindex="-1">Second Tab</a></li>
+    <li role="presentation" class=""><a href="#third" id="tab-third" role="tab" aria-selected="false" tabindex="-1">Third Tab</a></li>
+  </ul>
+  <div class="tabPanel" role="tabpanel" aria-hidden="false" tabindex="0" aria-labelledby="tab-first" style="display: block;">
+    <h2 id="first">First Tab's Main Heading</h2>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur blandit tellus nec turpis. In at sem. Nunc tempus sem. Morbi tincidunt diam vitae purus. Nulla facilisi. Curabitur facilisis ligula ut dui. Vivamus placerat, <a href="#">libero ut convallis elementum</a>, urna nisi nonummy libero, eu porttitor ante neque eu nulla.</p>
+    <p>Quisque ac velit. Phasellus ac eros in sapien <a href="#">congue elementum</a>. Donec vitae massa vitae magna rutrum placerat. Vestibulum tortor. Cras vitae justo at nisi commodo euismod.</p>
+  </div>
+  <div class="tabPanel" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="tab-second" style="display: none;">
+    <h2 id="second">Second Tab's Main Heading</h2>
+    <p>Aliquam vehicula justo ut metus. <a href="#">Maecenas sollicitudin</a>, leo vel eleifend consectetuer, ligula magna hendrerit massa, a facilisis eros tellus non arcu. Quisque pulvinar, metus sed ullamcorper lacinia, nulla nibh consequat libero, ac nonummy quam diam ut neque. Suspendisse interdum lacinia nulla.</p>
+  <p>Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. <a href="#">Phasellus metus nibh</a>, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+  </div>
+  <div class="tabPanel" role="tabpanel" aria-hidden="true" tabindex="0" aria-labelledby="tab-third" style="display: none;">
+    <h2 id="third">Third Tab's Main Heading</h2>
+    <p>Sed ut lectus in tellus blandit dapibus. <a href="#">Mauris elit quam</a>, fringilla vel, luctus eu, molestie sit amet, diam. Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. Phasellus metus nibh, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+  </div>
 </div>
 ```
 
@@ -84,6 +84,12 @@ http://paypal.github.io/bootstrap-accessibility-plugin/demo.html#tabs
 Uses the same source HTML as in the Bootstrap example above.
 
 ### Rendered HTML:
+
+Note: need to research what the following do:
+  aria-expanded
+  aria-selected
+  aria-controls
+
 
 ```html
 <div class="bs-example bs-example-tabs">
