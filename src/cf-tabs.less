@@ -125,14 +125,13 @@
 .tabs { 
     margin: 0 0 1em;
 
-    .tab-list {
-        ul {
-            .clearfix();
-            border-bottom: 4px solid @green;
-            list-style-type: none;
-            margin: 0; 
-            padding: 0;
-        }
+    
+    ul.tab-list {
+        .clearfix();
+        border-bottom: 4px solid @green;
+        list-style-type: none;
+        margin: 0; 
+        padding: 0;
 
         li {
             
@@ -183,11 +182,12 @@
 
             } //a
         } //li
-    } //tab-list
+    } //ul.tab-list
+
 
     .tabcontent {
         background: @white;
-        padding: 0 1em 1em 1em;
+        padding: 1em;
 
         > div {
             clear: both;

@@ -457,26 +457,26 @@ ul {
 .tabs {
   margin: 0 0 1em;
 }
-.tabs .tab-list ul {
+.tabs ul.tab-list {
   border-bottom: 4px solid #2cb34a;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.tabs .tab-list ul:before,
-.tabs .tab-list ul:after {
+.tabs ul.tab-list:before,
+.tabs ul.tab-list:after {
   content: " ";
   display: table;
 }
-.tabs .tab-list ul:after {
+.tabs ul.tab-list:after {
   clear: both;
 }
-.tabs .tab-list li {
+.tabs ul.tab-list li {
   float: left;
   margin: 0;
   padding: 0;
 }
-.tabs .tab-list li a {
+.tabs ul.tab-list li a {
   font-family: "Avenir Next", Arial, sans-serif;
   color: #101820;
   text-decoration: none;
@@ -488,26 +488,26 @@ ul {
   margin-right: .5em;
   padding: .5em 2em;
 }
-.tabs .tab-list li a.active {
+.tabs ul.tab-list li a.active {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs .tab-list li a.active:hover {
+.tabs ul.tab-list li a.active:hover {
   background-color: #addc91;
   border: none;
 }
-.tabs .tab-list li a:hover {
+.tabs ul.tab-list li a:hover {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs .tab-list li a:hover,
-.tabs .tab-list li a:focus {
+.tabs ul.tab-list li a:hover,
+.tabs ul.tab-list li a:focus {
   /* over-ride bottom borders from CFPB global styles.css */
   border-bottom: none;
 }
 .tabs .tabcontent {
   background: #ffffff;
-  padding: 0 1em 1em 1em;
+  padding: 1em;
 }
 .tabs .tabcontent > div {
   clear: both;
