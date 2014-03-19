@@ -3,23 +3,6 @@
    Tab Styling
    ========================================================================== */
 /* http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before,
-.cf:after {
-  content: " ";
-  /* 1 */
-  display: table;
-  /* 2 */
-}
-.cf:after {
-  clear: both;
-}
-/**
- * For IE 6/7 only
- * Include this rule to trigger hasLayout and contain floats.
- */
-.cf {
-  *zoom: 1;
-}
 /* ==========================================================================
    Capital Framework
    Color Variables
@@ -475,11 +458,18 @@ ul {
   margin: 0 0 1em;
 }
 .tabs .tab-list ul {
-  *zoom: 1;
   border-bottom: 4px solid #2cb34a;
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+.tabs .tab-list ul:before,
+.tabs .tab-list ul:after {
+  content: " ";
+  display: table;
+}
+.tabs .tab-list ul:after {
+  clear: both;
 }
 .tabs .tab-list li {
   float: left;
@@ -487,20 +477,20 @@ ul {
   padding: 0;
 }
 .tabs .tab-list li a {
-  /* position */
+  font-family: "Avenir Next", Arial, sans-serif;
+  color: #101820;
+  text-decoration: none;
+  border-bottom: none;
+  background-color: #e3e4e5;
   position: relative;
   display: block;
   top: 0;
   margin-right: .5em;
   padding: .5em 2em;
-  background-color: #75787b;
-  text-decoration: none;
-  /* over-ride bottom borders from CFPB global styles.css */
-  border-bottom: none;
 }
 .tabs .tab-list li a .active {
   background-color: #2cb34a;
-  color: #fff;
+  color: #ffffff;
 }
 .tabs .tab-list li a .active :hover {
   background-color: #addc91;
@@ -508,7 +498,7 @@ ul {
 }
 .tabs .tab-list li a :hover {
   background-color: #2cb34a;
-  color: #fff;
+  color: #ffffff;
 }
 .tabs .tab-list li a :hover,
 .tabs .tab-list li a :focus {
@@ -516,7 +506,7 @@ ul {
   border-bottom: none;
 }
 .tabs .tabcontent {
-  background: #fff;
+  background: #ffffff;
   padding: 0 1em 1em 1em;
 }
 .tabs .tabcontent > div {
