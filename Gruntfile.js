@@ -9,6 +9,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     /* Delete out all the content from the following locations */
+    /*
     clean: {
       vendor: [
         'demo',
@@ -16,6 +17,7 @@ module.exports = function(grunt) {
         'docs'
       ]
     },
+    */
 
     bower: {
       install: {
@@ -167,7 +169,7 @@ module.exports = function(grunt) {
   /**
    * Create custom task aliases and combinations
    */
-  grunt.registerTask('vendor', ['clean', 'bower']);
-  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'uglify', 'copy', 'htmlbuild']);
+  grunt.registerTask('vendor', ['bower']);
+  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'copy', 'htmlbuild']);
 
 };
