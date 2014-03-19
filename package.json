@@ -29,6 +29,7 @@
     "grunt-bower-task": "~0.3.2",
     "grunt-contrib-clean": "latest",
     "grunt-contrib-concat": "latest",
+    "grunt-html-build": "latest",
     "grunt-contrib-copy": "latest",
     "grunt-contrib-less": "~0.8.3",
     "grunt-contrib-uglify": "0.4.0",

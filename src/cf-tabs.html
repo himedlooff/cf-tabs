@@ -2,147 +2,25 @@
 <head>
     <title>cf-tabs</title>
 
-    <style>
-
-        /* TABS */
-        .tabset { 
-            margin: 0 0 1em;
-        }
-        h3 + .tabset {
-            margin-top: 1em;
-        }
-        ul.tabs {
-            border-bottom: 4px solid #50b948;
-            height: 30px;
-            margin: 0; 
-            padding: 0;
-        }
-
-        .tabs li {
-            list-style-type: none;
-            margin: 0;
-            padding-right: 5px;
-            float: left;
-        }
-
-        .tabs li a.active {
-            background-color: #50b948;
-            color: #fff;
-            cursor: default;
-            border: none;
-        }
-
-        .tabs li a {
-            
-            position: relative; 
-            display: block; 
-            float: left;
-            top: 0;
-
-            margin-right: 4px;
-            padding: 8px 20px 7px 20px;
-            
-            background-color: #C5E4BF;
-
-            color: #212121;
-            font-size: 15px;
-            line-height: 15px;
-            text-decoration: none;
-            /* over-ride bottom borders from CFPB global styles.css */
-            border-bottom: none;
-        }
-        .tabs li a:hover {
-            background-color: #A9DC93; 
-            color: #212121;
-        }
-
-        .tabs li a.active:hover {
-            background: #50b948;
-            border: none;
-        }
-
-        .tabs li a:hover, .tabs li a:focus {
-            /* over-ride bottom borders from CFPB global styles.css */
-            border-bottom: none;
-        }
-
-        .tabcontent {
-            background: white;
-            padding: 1em;
-        }
-
-        .tabcontent > div {
-            clear: both;
-            min-height: 10px;
-            
-        }
-        /* END TABS */
-
-    </style>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-
-    <script>
-
-        /* ********* */
-        /* TABSET */
-        /* ********* */
-
-
-        (function( $ ) {
-          $.fn.cTab = function() {
-          
-          var $tabset = this;
-          
-          // Hide all the inactive tabs. They are not hidden by CSS for 508 compliance
-          $tabset.find(".tabcontent > div").hide().filter(".active").show();
-          
-          // Attach a click handler to all tab anchor elements
-          $tabset.find(".tabs a").click(function(e) {
-            e.preventDefault();
-            
-            // The clicked <a> tag is this
-            var $this = $(this),
-            $this_tabset = $this.closest(".tabset"),
-            this_tabname = $this.attr('data-tabname'),
-            $this_tabcontent = $this_tabset.find('.tabcontent [data-tabname=' + this_tabname + ']');
-
-            // make everything inactive
-            $this_tabset.find('.tabcontent .active').hide();
-            $this_tabset.find('.active').removeClass('active');
-            
-            // make clicked active
-            $this_tabcontent.addClass("active").show();
-            $this.addClass("active");
-          });   
-          };
-
-          // auto-init
-          $(function(){
-            $('.tabset').cTab();
-          });
-
-        })( jQuery );
-
-        /* ********* */
-        /* END TABSET */
-        /* ********* */
-
-    </script>
+    <link rel="stylesheet" type="text/css" href="static/css/cf-tabs.css">
+    <script src="static/js/vendor.js"></script>
+    <script src="static/js/cf-tabs.js"></script>
 
 </head>
 <body>
 
-        <h1>Tabset from the CFPB Strategic Plan (c. 2012)</h1>
+        <h1>Capital Framework Tabset</h1>
 
-        <div class="tabset">
-            <ul class="tabs">
-                <li><a data-tabname="tab1id" href="#" class="active">Tab 1</a></li>
-                <li><a data-tabname="tab2id" href="#">Tab 2</a></li>
-                <li><a data-tabname="tab3id" href="#">Tab 3</a></li>
-                
-            </ul>
-            <div class="tabcontent">
+        <div class="tabs">
+            <div class="tabs-list">
+                <ul>
+                    <li><a data-tabname="tab1id" href="#" class="active">Tab 1</a></li>
+                    <li><a data-tabname="tab2id" href="#">Tab 2</a></li>
+                    <li><a data-tabname="tab3id" href="#">Tab 3</a></li>
+                    
+                </ul>
+            </div>
+            <div class="tab-content">
                 <div data-tabname="tab1id" class="active">
                     
                     <h3>Tab 1</h3>

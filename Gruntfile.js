@@ -93,11 +93,33 @@ module.exports = function(grunt) {
         [{
           expand: true,
           cwd: 'dist/',
-          src: ['static/css/cf-tabs.css', 'static/js/cf-tabs.js', 'static/css/vendor.js'],
+          src: ['static/css/cf-tabs.css', 'static/js/cf-tabs.js', 'static/js/vendor.js'],
           dest: 'docs'
+        }]
+      },
+      demo: {
+        files:
+        [{
+          expand: true,
+          cwd: 'dist/',
+          src: ['static/css/cf-tabs.css', 'static/js/cf-tabs.js', 'static/js/vendor.js'],
+          dest: 'demo'
         }]
       }
     },
+
+    htmlbuild: {
+      dist: {
+        src: 'src/cf-tabs.html',
+        dest: 'dist/',
+        options: {
+          beautify: true
+        }
+      }
+    }
+
+/*
+    ,
 
     topdoc: {
       demo: {
@@ -127,7 +149,7 @@ module.exports = function(grunt) {
         }
       }
     }
-
+*/
   });
 
   /**
@@ -137,6 +159,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-bower-task');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-topdoc');
@@ -145,6 +168,6 @@ module.exports = function(grunt) {
    * Create custom task aliases and combinations
    */
   grunt.registerTask('vendor', ['clean', 'bower']);
-  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'uglify', 'copy']);
+  grunt.registerTask('default', ['clean', 'less', 'autoprefixer', 'uglify', 'copy', 'htmlbuild']);
 
 };
