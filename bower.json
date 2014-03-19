@@ -1,0 +1,32 @@
+{
+  "name": "cf-tabs",
+  "version": "0.1.0",
+  "description": "Tabset JavaScript component: A single content area with multiple panels, each associated with a header in a list.",
+  "keywords": ["capital-framework", "capital", "tabs", "less"],
+  "authors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "url": "http://cfpb.github.io/"
+    }
+  ],
+  "homepage": "https://github.com/cfpb/cf-tabs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-tabs.git"
+  },
+  "license": "https://github.com/cfpb/cf-tabs/blob/master/TERMS.md",
+  "main": "src/",
+  "dependencies": {
+    "jquery": "~1.10",
+    "cf-colors": "git://github.com/cfpb/cf-colors.git",
+    "cf-typography": "git://github.com/cfpb/cf-typography.git"
+  },
+  "exportsOverride": {
+    "cf-*": {
+      "css": "src/**/*.css",
+      "less": "src/**/*.less",
+      "fonts": "src/fonts/*.*",
+      "js": "src/**/*.js"
+    }
+  }
+}

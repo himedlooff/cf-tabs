@@ -1,0 +1,194 @@
+/* ==========================================================================
+   Capital Framework
+   Button Styling
+   ========================================================================== */
+
+@import "../vendor/cf-colors/cf-colors.less";
+@import "../vendor/cf-typography/cf-typography.less";
+
+@font-face {
+    font-family: "Avenir Next";
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/e9167238-3b3f-4813-a04a-a384394eed42.eot");
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("embedded-opentype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next Italic";
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/d1fddef1-d940-4904-8f6c-17e809462301.eot");
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/d1fddef1-d940-4904-8f6c-17e809462301.eot?#iefix") format("embedded-opentype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/92b66dbd-4201-4ac2-a605-4d4ffc8705cc.woff") format("woff"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/18839597-afa8-4f0b-9abb-4a30262d0da8.ttf") format("truetype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585.svg#1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585") format("svg");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Avenir Next Medium";
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/1a7c9181-cd24-4943-a9d9-d033189524e0.eot");
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?#iefix") format("embedded-opentype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/f26faddb-86cc-4477-a253-1e1287684336.woff") format("woff"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf") format("truetype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg#a89d6ad1-a04f-4a8f-b140-e55478dbea80") format("svg");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Avenir Next Demi";
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/12d643f2-3899-49d5-a85b-ff430f5fad15.eot");
+    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?#iefix") format("embedded-opentype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff") format("woff"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf") format("truetype"),
+         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/99affa9a-a5e9-4559-bd07-20cf0071852d.svg#99affa9a-a5e9-4559-bd07-20cf0071852d") format("svg");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+// LESS Font stack variables
+// Should't these be in cf-typography?
+@sans-serif: "Avenir Next", Arial, sans-serif;
+@sans-serif-medium: "Avenir Next Medium", Arial, sans-serif;
+@sans-serif-demi: "Avenir Next Demi", Arial, sans-serif;
+@sans-serif-italic: "Avenir Next Italic", Arial, sans-serif;
+@serif: Georgia, "Times New Roman", serif;
+@monospace: monospace, sans-serif;
+
+
+/* topdoc
+    name: LESS notes
+    family: cf-tabs
+    patterns:
+    - name: Variables
+      codenotes:
+        - "@btn-font-size: 14px;"
+        - "@btn-v-padding: 9px;"
+        - "@btn-v-padding-modifier-ie: .8;"
+      notes:
+        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
+          across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed."
+    tags:
+    - cf-tabs
+    - less
+*/
+
+
+
+
+/* topdoc
+    name: Default button
+    family: cf-tabs
+    notes:
+      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+        be used in production."
+    patterns:
+    - name: Default state
+      markup: |
+        <a href="#" class="btn">Anchor Tag</a>
+        <button class="btn">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn">
+    - name: Hovered/focused state
+      markup: |
+        <a href="#" class="btn hover">Anchor Tag</a>
+        <button class="btn hover">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn hover">
+    - name: Active state
+      markup: |
+        <a href="#" class="btn active">Anchor Tag</a>
+        <button class="btn active">Button Tag</button>
+        <input type="submit" value="Input Tag" class="btn active">
+    tags:
+    - cf-tabs
+*/
+
+
+/* TABS */
+.tabs { 
+    margin: 0 0 1em;
+
+    .tab-list {
+        ul {
+            border-bottom: 4px solid #50b948;
+            height: 30px;
+            margin: 0; 
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            margin: 0;
+            padding-right: 5px;
+            float: left;
+
+            a {
+                
+                position: relative; 
+                display: block; 
+                float: left;
+                top: 0;
+
+                margin-right: 4px;
+                padding: 8px 20px 7px 20px;
+                
+                background-color: #C5E4BF;
+
+                color: #212121;
+                font-size: 15px;
+                line-height: 15px;
+                text-decoration: none;
+                /* over-ride bottom borders from CFPB global styles.css */
+                border-bottom: none;
+
+
+                .active {
+                    background-color: #50b948;
+                    color: #fff;
+                    cursor: default;
+                    border: none;
+
+                    :hover {
+                        background: #50b948;
+                        border: none;
+                    }    
+                }
+
+                :hover {
+                    background-color: #A9DC93; 
+                    color: #212121;
+                }
+
+                :hover,
+                :focus {
+                    /* over-ride bottom borders from CFPB global styles.css */
+                    border-bottom: none;
+                }
+
+            } //a
+        } //li
+    } //tab-list
+
+    .tabcontent {
+        background: #fff;
+        padding: 1em;
+
+        > div {
+            clear: both;
+            min-height: 10px;
+        }
+        
+    } //tab-content
+
+} //tabs
+/* END TABS */
+
+
+/* topdoc
+  name: EOF
+  eof: true
+*/

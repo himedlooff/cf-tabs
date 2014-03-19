@@ -1,0 +1,38 @@
+{
+  "name": "cf-tabs",
+  "version": "0.1.0",
+  "description": "Tabset JavaScript component: A single content area with multiple panels, each associated with a header in a list.",
+  "keywords": ["capital-framework", "capital", "tabs", "less"],
+  "author": {
+    "name": "Consumer Financial Protection Bureau",
+    "url": "http://cfpb.github.io/"
+  },
+  "homepage": "https://github.com/cfpb/cf-tabs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-tabs.git"
+  },
+  "bugs": "https://github.com/cfpb/cf-tabs/issues",
+  "licenses": [
+    {
+      "type": "Public Domain",
+      "url": "https://github.com/cfpb/cf-tabs/blob/master/TERMS.md"
+    }
+  ],
+  "main": "src/",
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-autoprefixer": "latest",
+    "grunt-bower-task": "~0.3.2",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-concat": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-less": "~0.8.3",
+    "grunt-contrib-uglify": "0.4.0",
+    "grunt-topdoc": "~0.2.0",
+    "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git"
+  }
+}

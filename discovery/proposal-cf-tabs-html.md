@@ -5,7 +5,7 @@
 ## Source HTML:
 
 ```html
-<div class="cf-tabs">
+<div class="tabs">
     <ul>
         <li><a href="#tabset1-tab1">First Tab</a></li>
         <li><a href="#tabset1-tab2">Second Tab</a></li>
@@ -29,8 +29,8 @@
 ### Rendered HTML:
 
 ```html
-<div id="tabs">
-    <ul class="cf-tablist" role="tablist">
+<div id="tabs" class="tabs">
+    <ul class="tablist" role="tablist">
         <li role="presentation" class="active">
             <a href="#first" id="tab-first" role="tab" aria-selected="true" aria-expanded="true" tabindex="0">First Tab</a>
         </li>
