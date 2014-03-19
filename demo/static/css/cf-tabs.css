@@ -505,13 +505,20 @@ ul {
   /* over-ride bottom borders from CFPB global styles.css */
   border-bottom: none;
 }
-.tabs .tabcontent {
+.tabs .tab-content {
   background: #ffffff;
   padding: 1em;
 }
-.tabs .tabcontent > div {
-  clear: both;
+.tabs .tab-content > div {
   min-height: 4em;
+}
+.tabs .tab-content > div:before,
+.tabs .tab-content > div:after {
+  content: " ";
+  display: table;
+}
+.tabs .tab-content > div:after {
+  clear: both;
 }
 /* END TABS */
 /* topdoc
