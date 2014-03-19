@@ -488,20 +488,20 @@ ul {
   margin-right: .5em;
   padding: .5em 2em;
 }
-.tabs .tab-list li a .active {
+.tabs .tab-list li a.active {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs .tab-list li a .active :hover {
+.tabs .tab-list li a.active:hover {
   background-color: #addc91;
   border: none;
 }
-.tabs .tab-list li a :hover {
+.tabs .tab-list li a:hover {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs .tab-list li a :hover,
-.tabs .tab-list li a :focus {
+.tabs .tab-list li a:hover,
+.tabs .tab-list li a:focus {
   /* over-ride bottom borders from CFPB global styles.css */
   border-bottom: none;
 }

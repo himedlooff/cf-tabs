@@ -159,24 +159,24 @@
                 margin-right: .5em;
                 padding: .5em 2em;
 
-                .active {
+                &.active {
                     background-color: @green;
                     color: @white;
 
-                    :hover {
+                    &:hover {
                         background-color: @green-midtone;
                         border: none;
                     }    
                 }
 
-                :hover {
+                &:hover {
                     background-color: @green;
                     color: @white;
 
                 }
 
-                :hover,
-                :focus {
+                &:hover,
+                &:focus {
                     /* over-ride bottom borders from CFPB global styles.css */
                     border-bottom: none;
                 }

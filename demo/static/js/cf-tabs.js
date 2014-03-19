@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-03-19 5:06:56 PM */
+/*! cf-tabs 2014-03-19 5:15:29 PM */
 (function($) {
     $.fn.cTab = function() {
         var $tabset = this;
