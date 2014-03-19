@@ -1,7 +1,25 @@
 /* ==========================================================================
    Capital Framework
-   Button Styling
+   Tab Styling
    ========================================================================== */
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+.cf:after {
+  clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+  *zoom: 1;
+}
 /* ==========================================================================
    Capital Framework
    Color Variables
@@ -457,45 +475,40 @@ ul {
   margin: 0 0 1em;
 }
 .tabs .tab-list ul {
-  border-bottom: 4px solid #50b948;
-  height: 30px;
+  *zoom: 1;
+  border-bottom: 4px solid #2cb34a;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
 .tabs .tab-list li {
-  list-style-type: none;
-  margin: 0;
-  padding-right: 5px;
   float: left;
+  margin: 0;
+  padding: 0;
 }
 .tabs .tab-list li a {
+  /* position */
   position: relative;
   display: block;
-  float: left;
   top: 0;
-  margin-right: 4px;
-  padding: 8px 20px 7px 20px;
-  background-color: #C5E4BF;
-  color: #212121;
-  font-size: 15px;
-  line-height: 15px;
+  margin-right: .5em;
+  padding: .5em 2em;
+  background-color: #75787b;
   text-decoration: none;
   /* over-ride bottom borders from CFPB global styles.css */
   border-bottom: none;
 }
 .tabs .tab-list li a .active {
-  background-color: #50b948;
+  background-color: #2cb34a;
   color: #fff;
-  cursor: default;
-  border: none;
 }
 .tabs .tab-list li a .active :hover {
-  background: #50b948;
+  background-color: #addc91;
   border: none;
 }
 .tabs .tab-list li a :hover {
-  background-color: #A9DC93;
-  color: #212121;
+  background-color: #2cb34a;
+  color: #fff;
 }
 .tabs .tab-list li a :hover,
 .tabs .tab-list li a :focus {
@@ -504,11 +517,11 @@ ul {
 }
 .tabs .tabcontent {
   background: #fff;
-  padding: 1em;
+  padding: 0 1em 1em 1em;
 }
 .tabs .tabcontent > div {
   clear: both;
-  min-height: 10px;
+  min-height: 4em;
 }
 /* END TABS */
 /* topdoc

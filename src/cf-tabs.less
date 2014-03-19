@@ -1,7 +1,27 @@
 /* ==========================================================================
    Capital Framework
-   Button Styling
+   Tab Styling
    ========================================================================== */
+
+/* http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
 
 @import "../vendor/cf-colors/cf-colors.less";
 @import "../vendor/cf-typography/cf-typography.less";
@@ -114,53 +134,48 @@
 
     .tab-list {
         ul {
-            border-bottom: 4px solid #50b948;
-            height: 30px;
+            .cf;
+            border-bottom: 4px solid @green;
+            list-style-type: none;
             margin: 0; 
             padding: 0;
         }
 
         li {
-            list-style-type: none;
-            margin: 0;
-            padding-right: 5px;
+            
             float: left;
-
+            margin: 0;
+            padding: 0;
+            
             a {
                 
+                /* position */
                 position: relative; 
                 display: block; 
-                float: left;
                 top: 0;
 
-                margin-right: 4px;
-                padding: 8px 20px 7px 20px;
+                margin-right: .5em;
+                padding: .5em 2em;
                 
-                background-color: #C5E4BF;
-
-                color: #212121;
-                font-size: 15px;
-                line-height: 15px;
+                background-color: @gray;
                 text-decoration: none;
                 /* over-ride bottom borders from CFPB global styles.css */
                 border-bottom: none;
 
-
                 .active {
-                    background-color: #50b948;
+                    background-color: @green;
                     color: #fff;
-                    cursor: default;
-                    border: none;
 
                     :hover {
-                        background: #50b948;
+                        background-color: @green-midtone;
                         border: none;
                     }    
                 }
 
                 :hover {
-                    background-color: #A9DC93; 
-                    color: #212121;
+                    background-color: @green;
+                    color: #fff;
+
                 }
 
                 :hover,
@@ -175,11 +190,11 @@
 
     .tabcontent {
         background: #fff;
-        padding: 1em;
+        padding: 0 1em 1em 1em;
 
         > div {
             clear: both;
-            min-height: 10px;
+            min-height: 4em;
         }
         
     } //tab-content
