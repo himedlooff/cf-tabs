@@ -14,12 +14,12 @@
       // The clicked <a> tag is this
       var $this = $(this);
       var $this_tabset = $this.closest(".tabs");
-      var this_tabname = $this.attr('href');
+      var this_tabid = $this.attr('href').replace("/^#/","");
 
-      console.log("this_tabname:");
-      console.log(this_tabname);
+      console.log("this_tabid:");
+      console.log(this_tabid);
 
-      var $this_tabcontent = $this_tabset.find('.tab-content [id=' + this_tabname + ']');
+      var $this_tabcontent = $this_tabset.find('.tab-content [id=' + this_tabid + ']');
 
       console.log("this_tabcontent:");
       console.log($this_tabcontent);

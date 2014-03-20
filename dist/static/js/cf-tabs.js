@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-03-20 3:08:42 PM */
+/*! cf-tabs 2014-03-20 3:15:07 PM */
 (function($) {
     $.fn.cfTab = function() {
         var $tabset = this;
@@ -7,10 +7,10 @@
             e.preventDefault();
             var $this = $(this);
             var $this_tabset = $this.closest(".tabs");
-            var this_tabname = $this.attr("href");
-            console.log("this_tabname:");
-            console.log(this_tabname);
-            var $this_tabcontent = $this_tabset.find(".tab-content [id=" + this_tabname + "]");
+            var this_tabid = $this.attr("href").replace("/^#/", "");
+            console.log("this_tabid:");
+            console.log(this_tabid);
+            var $this_tabcontent = $this_tabset.find(".tab-content [id=" + this_tabid + "]");
             console.log("this_tabcontent:");
             console.log($this_tabcontent);
             $this_tabset.find(".tab-content .active").hide();
