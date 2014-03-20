@@ -507,7 +507,7 @@ ul {
 }
 .tabs .tab-content {
   background: #ffffff;
-  padding: 1em;
+  padding: 1em 0;
 }
 .tabs .tab-content > div {
   min-height: 4em;

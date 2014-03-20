@@ -1,24 +1,31 @@
 
 (function( $ ) {
-  $.fn.cTab = function() {
+  $.fn.cfTab = function() {
   
     var $tabset = this;
     
     // Hide all the inactive tabs. They are not hidden by CSS for 508 compliance
-    $tabset.find(".tabcontent > div").hide().filter(".active").show();
+    $tabset.find(".tab-content > div").hide().filter(".active").show();
     
     // Attach a click handler to all tab anchor elements
-    $tabset.find(".tabs a").click(function(e) {
+    $tabset.find(".tab-list a").click(function(e) {
       e.preventDefault();
       
       // The clicked <a> tag is this
-      var $this = $(this),
-      $this_tabset = $this.closest(".tabset"),
-      this_tabname = $this.attr('data-tabname'),
-      $this_tabcontent = $this_tabset.find('.tabcontent [data-tabname=' + this_tabname + ']');
+      var $this = $(this);
+      var $this_tabset = $this.closest(".tabs");
+      var this_tabname = $this.attr('href');
+
+      console.log("this_tabname:");
+      console.log(this_tabname);
+
+      var $this_tabcontent = $this_tabset.find('.tab-content [id=' + this_tabname + ']');
+
+      console.log("this_tabcontent:");
+      console.log($this_tabcontent);
 
       // make everything inactive
-      $this_tabset.find('.tabcontent .active').hide();
+      $this_tabset.find('.tab-content .active').hide();
       $this_tabset.find('.active').removeClass('active');
       
       // make clicked active
@@ -29,7 +36,7 @@
 
   // auto-init
   $(function(){
-    $('.tabset').cTab();
+    $('.tabs').cfTab();
   });
 
 })( jQuery );
