@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-03-20 3:15:07 PM */
+/*! cf-tabs 2014-03-20 3:20:27 PM */
 (function($) {
     $.fn.cfTab = function() {
         var $tabset = this;
@@ -7,7 +7,7 @@
             e.preventDefault();
             var $this = $(this);
             var $this_tabset = $this.closest(".tabs");
-            var this_tabid = $this.attr("href").replace("/^#/", "");
+            var this_tabid = $this.attr("href").substring(1);
             console.log("this_tabid:");
             console.log(this_tabid);
             var $this_tabcontent = $this_tabset.find(".tab-content [id=" + this_tabid + "]");

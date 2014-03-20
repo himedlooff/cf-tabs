@@ -14,7 +14,7 @@
       // The clicked <a> tag is this
       var $this = $(this);
       var $this_tabset = $this.closest(".tabs");
-      var this_tabid = $this.attr('href').replace("/^#/","");
+      var this_tabid = $this.attr('href').substring(1);
 
       console.log("this_tabid:");
       console.log(this_tabid);
