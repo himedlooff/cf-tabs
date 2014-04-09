@@ -1,9 +1,9 @@
-/*! cf-tabs 2014-04-09 2:34:40 PM */
+/*! cf-tabs 2014-04-09 2:51:18 PM */
 (function($) {
     $.fn.cfTabs = function() {
-        this.find("> div").hide().addClass("tab-content");
+        this.find("> div").hide().addClass("cf-tabpanel");
         this.find("> div").first().show().addClass("active");
-        this.find("> ul").addClass("tab-list");
+        this.find("> ul").addClass("cf-tablist");
         this.find("> ul > li a").first().addClass("active");
         this.find("> ul a").click(function(e) {
             e.preventDefault();

@@ -95,27 +95,30 @@
 
 
 /* topdoc
-    name: Default button
+    name: Default tab
     family: cf-tabs
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
     patterns:
     - name: Default state
       markup: |
-        <a href="#" class="btn">Anchor Tag</a>
-        <button class="btn">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn">
-    - name: Hovered/focused state
-      markup: |
-        <a href="#" class="btn hover">Anchor Tag</a>
-        <button class="btn hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn hover">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn active">Anchor Tag</a>
-        <button class="btn active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn active">
+        <div class="tabs">
+            <ul>
+                <li><a href="#tabset1-tab1">First Tab</a></li>
+                <li><a href="#tabset1-tab2">Second Tab</a></li>
+                <li><a href="#tabset1-tab3">Third Tab</a></li>
+            </ul>
+            <div id="tabset1-tab1">
+                <h3>First Tab Heading</h3>
+                <p>Content</p>
+            </div>
+            <div id="tabset1-tab2">
+                <h3>Second Tab Heading</h3>
+                <p>Content</p>
+            </div>
+            <div id="tabset1-tab3">
+                <h3>Third Tab Heading</h3>
+                <p>Content</p>
+            </div>
+        </div>
     tags:
     - cf-tabs
 */
@@ -126,7 +129,7 @@
     margin: 0 0 1em;
 
     
-    ul.tab-list {
+    ul.cf-tablist {
         .clearfix();
         border-bottom: 4px solid @green;
         list-style-type: none;
@@ -181,10 +184,10 @@
                 }
             } //a
         } //li
-    } //ul.tab-list
+    } //ul.cf-tablist
 
 
-    .tab-content {
+    .cf-tabpanel {
         background: @white;
         padding: 1em 0;
 
@@ -193,7 +196,7 @@
             min-height: 4em;
         }
         
-    } //tab-content
+    } //cf-tabpanel
 
 } //tabs
 /* END TABS */

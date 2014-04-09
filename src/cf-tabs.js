@@ -13,13 +13,17 @@
   */
     // Hide all the inactive tabs. They are not hidden by CSS for 508 compliance
 
-    this.find("> div").hide().addClass('tab-content');
+    this.find("> div").hide().addClass('cf-tabpanel');
     this.find("> div").first().show().addClass('active');
 
     // Add classes for styling
-    this.find("> ul").addClass('tab-list');
+    this.find("> ul").addClass('cf-tablist');
     this.find("> ul > li a").first().addClass('active');
     
+    //set the default aria attributes
+    
+    
+
     // Attach a click handler to all tab anchor elements
     this.find("> ul a").click(function(e) {
       e.preventDefault();

@@ -429,27 +429,30 @@ ul {
     - less
 */
 /* topdoc
-    name: Default button
+    name: Default tab
     family: cf-tabs
-    notes:
-      - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
-        be used in production."
     patterns:
     - name: Default state
       markup: |
-        <a href="#" class="btn">Anchor Tag</a>
-        <button class="btn">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn">
-    - name: Hovered/focused state
-      markup: |
-        <a href="#" class="btn hover">Anchor Tag</a>
-        <button class="btn hover">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn hover">
-    - name: Active state
-      markup: |
-        <a href="#" class="btn active">Anchor Tag</a>
-        <button class="btn active">Button Tag</button>
-        <input type="submit" value="Input Tag" class="btn active">
+        <div class="tabs">
+            <ul>
+                <li><a href="#tabset1-tab1">First Tab</a></li>
+                <li><a href="#tabset1-tab2">Second Tab</a></li>
+                <li><a href="#tabset1-tab3">Third Tab</a></li>
+            </ul>
+            <div id="tabset1-tab1">
+                <h3>First Tab Heading</h3>
+                <p>Content</p>
+            </div>
+            <div id="tabset1-tab2">
+                <h3>Second Tab Heading</h3>
+                <p>Content</p>
+            </div>
+            <div id="tabset1-tab3">
+                <h3>Third Tab Heading</h3>
+                <p>Content</p>
+            </div>
+        </div>
     tags:
     - cf-tabs
 */
@@ -457,26 +460,26 @@ ul {
 .tabs {
   margin: 0 0 1em;
 }
-.tabs ul.tab-list {
+.tabs ul.cf-tablist {
   border-bottom: 4px solid #2cb34a;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-.tabs ul.tab-list:before,
-.tabs ul.tab-list:after {
+.tabs ul.cf-tablist:before,
+.tabs ul.cf-tablist:after {
   content: " ";
   display: table;
 }
-.tabs ul.tab-list:after {
+.tabs ul.cf-tablist:after {
   clear: both;
 }
-.tabs ul.tab-list li {
+.tabs ul.cf-tablist li {
   float: left;
   margin: 0;
   padding: 0;
 }
-.tabs ul.tab-list li a {
+.tabs ul.cf-tablist li a {
   font-family: "Avenir Next", Arial, sans-serif;
   color: #101820;
   text-decoration: none;
@@ -488,36 +491,36 @@ ul {
   margin-right: .5em;
   padding: .5em 2em;
 }
-.tabs ul.tab-list li a.active {
+.tabs ul.cf-tablist li a.active {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs ul.tab-list li a.active:hover {
+.tabs ul.cf-tablist li a.active:hover {
   background-color: #addc91;
   border: none;
 }
-.tabs ul.tab-list li a:hover {
+.tabs ul.cf-tablist li a:hover {
   background-color: #2cb34a;
   color: #ffffff;
 }
-.tabs ul.tab-list li a:hover,
-.tabs ul.tab-list li a:focus {
+.tabs ul.cf-tablist li a:hover,
+.tabs ul.cf-tablist li a:focus {
   /* over-ride bottom borders from CFPB global styles.css */
   border-bottom: none;
 }
-.tabs .tab-content {
+.tabs .cf-tabpanel {
   background: #ffffff;
   padding: 1em 0;
 }
-.tabs .tab-content > div {
+.tabs .cf-tabpanel > div {
   min-height: 4em;
 }
-.tabs .tab-content > div:before,
-.tabs .tab-content > div:after {
+.tabs .cf-tabpanel > div:before,
+.tabs .cf-tabpanel > div:after {
   content: " ";
   display: table;
 }
-.tabs .tab-content > div:after {
+.tabs .cf-tabpanel > div:after {
   clear: both;
 }
 /* END TABS */
