@@ -30,7 +30,7 @@
 
 ```html
 <div class="tabs">
-    <ul class="tablist" role="tablist">
+    <ul class="cf-tablist" role="tablist">
         <li role="presentation" class="active">
             <a href="#first" id="tab-first" role="tab" aria-selected="true" aria-expanded="true" tabindex="0">First Tab</a>
         </li>
