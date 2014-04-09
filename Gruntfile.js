@@ -19,6 +19,7 @@ module.exports = function(grunt) {
     },
     */
 
+    /* This tasks downloads only the "main" files from each repo listed in bower.json */
     bower: {
       install: {
         options: {
@@ -89,6 +90,21 @@ module.exports = function(grunt) {
       }
     },
 
+
+    htmlbuild: {
+      dist: {
+        src: 'src/cf-tabs.html',
+        dest: 'dist/',
+        options: {
+          beautify: true
+        }
+      }
+    },
+
+    /* 
+    * Copy is used to copy the files from the dist directory to docs and demo. 
+    * dist is the output location of the other grunt tasks
+    */
     copy: {
       docs: {
         files:
@@ -110,12 +126,22 @@ module.exports = function(grunt) {
       }
     },
 
-    htmlbuild: {
-      dist: {
-        src: 'src/cf-tabs.html',
-        dest: 'dist/',
+    watch: {
+      scripts: {
+        files: ['src/*'],
+        tasks: ['build'],
         options: {
-          beautify: true
+          spawn: false,
+        },
+      },
+    },
+
+
+    connect: {
+      server: {
+        options: {
+          port: 9001,
+          base: 'dist'
         }
       }
     }
@@ -152,7 +178,16 @@ module.exports = function(grunt) {
       }
     }
 */
+
   });
+
+/*
+To-Do:
+watch
+tests
+topdoc
+serve
+*/
 
   /**
    * The above tasks are loaded here.
@@ -165,11 +200,16 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-topdoc');
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-connect');
 
   /**
    * Create custom task aliases and combinations
    */
   grunt.registerTask('vendor', ['bower']);
-  grunt.registerTask('default', ['less', 'autoprefixer', 'uglify', 'copy', 'htmlbuild']);
+  grunt.registerTask('demo', ['copy']);
+  grunt.registerTask('build', ['less', 'autoprefixer', 'uglify', 'htmlbuild', 'copy']);
+  grunt.registerTask('serve', ['connect:server','watch']);
+  grunt.registerTask('default', ['build', 'demo']);
 
 };
