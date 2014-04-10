@@ -13,18 +13,19 @@
     //set the default aria attributes to the tab list
     this.find("> ul").attr("role", "tablist");
     this.find("> ul > li").attr("role", "presentation");
-    this.find("> ul > li > a").attr("role", "tab").attr("aria-selected", "false").attr("aria-expanded", "false");
-    this.find("> ul > li > a").first().attr("aria-selected", "true").attr("aria-expanded", "true");
+    this.find("> ul > li > a").attr("role", "tab").attr("aria-selected", "false").attr("aria-expanded", "false").attr("tabindex", "-1");
+    this.find("> ul > li > a").first().attr("aria-selected", "true").attr("aria-expanded", "true").attr("tabindex", "0");
 
     // add the default aria attributes to the tab panel
-    this.find("> div").attr("role", "tabpanel").attr("aria-hidden", "true");
-    this.find("> div").first().attr("aria-hidden", "false");
+    this.find("> div").attr("role", "tabpanel").attr("aria-hidden", "true").attr("tabindex", "0");
+    this.find("> div").first().attr("aria-hidden", "false").attr("tabindex", "0");
 
     // create IDs for each anchor for the area-labelledby
     this.find("> ul > li > a").each(function() {
-      var tabID = "tablist-" + $( this ).attr('href').substring(1);
+      var tabID = $( this ).attr('href').substring(1);
+
       //console.log(tabID);
-      $(this).attr("id",tabID);
+      $(this).attr("id","tablist-" + tabID).attr("aria-controls", tabID);
     });
 
     this.find("> div").each(function() {

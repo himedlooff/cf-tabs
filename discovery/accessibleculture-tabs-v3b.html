@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+
+<head>
+    <title>cf-tabs</title>
+    <style>
+.tabs {margin: 1em 0 3em;}
+.tabsList {float: left; list-style: none; margin: 0; padding: 0;}
+.tabsList li {
+	position: relative; /*for z-index*/
+	float: left;
+	margin: 0 5px 0 0;
+	z-index: 1;
+}
+.tabsList li a {
+	position: relative;
+	top: 4px;
+	float: left;
+	overflow: hidden;
+	font-weight: normal;
+	text-shadow: none;
+	background: #fff;
+	margin: 4px 0 0;
+	padding: 8px 0.5em 10px;
+	border-style: solid;
+	border-color: #ccc;
+	border-width: 2px 2px 0;
+	-moz-border-radius-topleft: 0.5em;
+	-moz-border-radius-topright: 0.5em;
+	-webkit-border-top-left-radius: 0.5em;
+	-webkit-border-top-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	cursor: pointer;
+}
+.tabsList li a:link {border-color: #ccc;}
+.tabsList li a:hover, .tabsList li a:focus, .tabsList li a:active {
+	background-color: #5c7891; /*default blue*/
+	border-color: #999;
+	color: #fff;
+	text-shadow: 0 1px 1px rgba(0, 0, 0,.2);
+}
+.tabsList li a:active {top: 2px;}
+.tabsList li.current {z-index: 10;}
+.tabsList li.current a {
+	top: 2px;
+	font-weight: bold;
+	color: #333;
+	background: #fafafa;
+	border-color: #999;
+	text-shadow: 0 1px 1px rgba(0, 0, 0,.2);
+}
+.tabsList li.current a:hover, .tabsList li.current a:focus {color: #333; background-color: #fafafa;}
+.tabsList li.current a:focus {outline: 1px dotted #444;}
+.tabsList a span {
+	position: absolute;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	opacity: 0;
+}
+.tabPanel {
+	position: relative;  /*for z-index*/
+	display: block;
+	visibility: visible;
+	clear: left;
+	overflow: auto;
+	padding: 0 1em 1em;
+	border: 2px solid #999;
+	-moz-border-radius: 0 1em 1em;
+	-webkit-border-radius: 0 1em 1em;
+	border-radius: 0 1em 1em;
+	z-index: 5;
+	color: #333;
+	background-color: #fafafa;
+}
+.tabPanel:focus {outline: 1px dotted #999;}
+.tabPanel h2 {display: inline-block;}
+.tabPanel h2:focus {outline: 1px dotted #999;}
+/*==============================*/
+/*IE6-7*/
+/*properties preceded by a "_" are for ie6 only*/
+.tabPanel {zoom:1; _z-index: 0;}
+.tabsList li.current a {_top: 2px; _background-color: #fafafa; _border-bottom: none; outline: expression(hideFocus='');}
+.tabsList li.current a:hover, .tabsList li.current a:focus, .tabsList li.current a:active {
+	_top: 2px;
+	_border-bottom: none;
+	_color: #333;
+	_background-color: #fafafa;
+}
+.tabsList li a:hover, .tabsList li a:focus {
+	_top: 4px;
+	_border: 2px solid #999;
+	_border-bottom: none;
+}
+.tabsList li a:active {
+	_top: 2px;
+	_border: 2px solid #999;
+	_border-bottom: none;
+}
+.tabPanel h3 {
+	zoom: 1;
+	*display: inline; 
+	_height:1em;
+}
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script>
+var AriaTabs3b = (function() {
+	$(function() {
+		//for each tabs DIV...
+		$("#tabs").each( 
+			function(t){
+				var tabsDiv=$(this);
+				//for each individual tab DIV, set class and aria role attributes, and hide it
+				$(tabsDiv).find(">div").attr({"class": "tabPanel", "role": "tabpanel", "aria-hidden": "true"}).hide();
+				$(".tabPanel").attr("tabindex", "0");
+				//get the list of tab links
+				var tabsList=$(this).find("ul:first").attr({"class": "tabsList", "role": "tablist"}); 
+				//for each item in the tabsList...
+				$(tabsList).find("li>a").each(
+					function(a){
+						//create a unique id using the tab link's href
+						var tabId="tab-"+$(this).attr("href").slice(1);
+						//assign tabId, aria and tabindex attributes to the tab control, but do not remove the href
+						$(this).attr({"id": tabId, "role": "tab", "aria-selected": "false", "tabindex": "-1"}).parent().attr("role", "presentation");
+						//assign aria attribute to the relevant tab panel
+						$(tabsDiv).find(".tabPanel").eq(a).attr("aria-labelledby", tabId);
+						//set the click event for each tab link
+						$(this).click(
+							function(e){
+								//prevent default click event
+								e.preventDefault();
+								//change state of previously selected tabList item
+								$(tabsList).find(">li.current").removeClass("current").find(">a").attr({"aria-selected": "false", "tabindex": "-1"});
+								//hide previously selected tabPanel
+								$(tabsDiv).find(".tabPanel:visible").attr("aria-hidden", "true").hide();
+								//show newly selected tabPanel
+								$(tabsDiv).find(".tabPanel").eq($(this).parent().index()).attr("aria-hidden", "false").show();
+								//set state of newly selected tab list item
+								$(this).attr({"aria-selected": "true", "tabindex": "0"}).parent().addClass("current");
+								$(this).focus();
+							}
+						);
+					}
+				);
+				
+				//set keydown events on tabList item for navigating tabs
+				$(tabsList).delegate("a", "keydown",
+					function (e) {
+						switch (e.which) {
+							case 37: case 38:
+								if ($(this).parent().prev().length!=0) {
+									$(this).parent().prev().find(">a").click();
+								} else {
+									$(tabsList).find("li:last>a").click();
+								}
+								break;
+							case 39: case 40:
+								if ($(this).parent().next().length!=0) {
+									$(this).parent().next().find(">a").click();
+								} else {
+									$(tabsList).find("li:first>a").click();
+								}
+								break;
+						}
+					}
+				);
+				//show the first tabPanel
+				$(tabsDiv).find(".tabPanel:first").attr("aria-hidden", "false").show();
+				//set state for the first tabsList li
+				$(tabsList).find("li:first").addClass("current").find(">a").attr({"aria-selected": "true", "tabindex": "0"});
+		
+			}
+		);
+	});
+})();
+    </script>
+
+</head>
+<body>
+
+			<div id="tabs">
+					<ul>
+						<li><a href="#first">First Tab</a></li>
+						<li><a href="#second">Second Tab</a></li>
+						<li><a href="#third">Third Tab</a></li>
+					</ul>
+					<div>
+						<h2 id="first">First Tab's Main Heading</h2>
+						<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Curabitur blandit tellus nec turpis. In at sem. Nunc tempus sem. Morbi tincidunt diam vitae purus. Nulla facilisi. Curabitur facilisis ligula ut dui. Vivamus placerat, <a href="#">libero ut convallis elementum</a>, urna nisi nonummy libero, eu porttitor ante neque eu nulla.</p>
+						<p>Quisque ac velit. Phasellus ac eros in sapien <a href="#">congue elementum</a>. Donec vitae massa vitae magna rutrum placerat. Vestibulum tortor. Cras vitae justo at nisi commodo euismod.</p>
+					</div>
+					<div>
+						<h2 id="second">Second Tab's Main Heading</h2>
+						<p>Aliquam vehicula justo ut metus. <a href="#">Maecenas sollicitudin</a>, leo vel eleifend consectetuer, ligula magna hendrerit massa, a facilisis eros tellus non arcu. Quisque pulvinar, metus sed ullamcorper lacinia, nulla nibh consequat libero, ac nonummy quam diam ut neque. Suspendisse interdum lacinia nulla.</p>
+					<p>Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. <a href="#">Phasellus metus nibh</a>, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+					</div>
+					<div>
+						<h2 id="third">Third Tab's Main Heading</h2>
+						<p>Sed ut lectus in tellus blandit dapibus. <a href="#">Mauris elit quam</a>, fringilla vel, luctus eu, molestie sit amet, diam. Quisque dapibus feugiat magna. Nunc velit erat, congue eget, tristique et, scelerisque id, quam. Phasellus nonummy enim in pede. Phasellus metus nibh, ultrices convallis, auctor aliquet, suscipit eu, nisi.</p>
+					</div>
+				</div>
+</body>
+</html>
