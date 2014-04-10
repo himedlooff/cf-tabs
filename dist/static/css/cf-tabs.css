@@ -482,6 +482,7 @@ ul {
 .tabs ul.cf-tablist li a {
   font-family: "Avenir Next", Arial, sans-serif;
   color: #101820;
+  cursor: pointer;
   text-decoration: none;
   border-bottom: none;
   background-color: #e3e4e5;

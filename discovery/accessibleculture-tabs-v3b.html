@@ -24,12 +24,6 @@
 	border-style: solid;
 	border-color: #ccc;
 	border-width: 2px 2px 0;
-	-moz-border-radius-topleft: 0.5em;
-	-moz-border-radius-topright: 0.5em;
-	-webkit-border-top-left-radius: 0.5em;
-	-webkit-border-top-right-radius: 0.5em;
-	border-top-left-radius: 0.5em;
-	border-top-right-radius: 0.5em;
 	cursor: pointer;
 }
 .tabsList li a:link {border-color: #ccc;}
@@ -67,9 +61,6 @@
 	overflow: auto;
 	padding: 0 1em 1em;
 	border: 2px solid #999;
-	-moz-border-radius: 0 1em 1em;
-	-webkit-border-radius: 0 1em 1em;
-	border-radius: 0 1em 1em;
 	z-index: 5;
 	color: #333;
 	background-color: #fafafa;
@@ -119,6 +110,9 @@ var AriaTabs3b = (function() {
 				//get the list of tab links
 				var tabsList=$(this).find("ul:first").attr({"class": "tabsList", "role": "tablist"}); 
 				//for each item in the tabsList...
+
+				console.log(tabsList);
+
 				$(tabsList).find("li>a").each(
 					function(a){
 						//create a unique id using the tab link's href

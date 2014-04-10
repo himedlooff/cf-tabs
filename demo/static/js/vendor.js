@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-04-10 11:20:24 AM */
+/*! cf-tabs 2014-04-10 12:16:33 PM */
 (function(global, factory) {
     if (typeof module === "object" && typeof module.exports === "object") {
         module.exports = global.document ? factory(global, true) : function(w) {
