@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-04-10 1:27:39 PM */
+/*! cf-tabs 2014-04-10 1:33:26 PM */
 (function($) {
     $.fn.cfTabs = function() {
         var tabList = this.find("> ul");
