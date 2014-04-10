@@ -1,25 +1,24 @@
-/*! cf-tabs 2014-04-10 12:16:34 PM */
+/*! cf-tabs 2014-04-10 1:27:39 PM */
 (function($) {
     $.fn.cfTabs = function() {
         var tabList = this.find("> ul");
-        console.log(tabList);
-        this.find("> div").hide().addClass("cf-tabpanel");
-        this.find("> div").first().show().addClass("active");
-        this.find("> ul").addClass("cf-tablist");
-        this.find("> ul > li a").first().addClass("active");
-        this.find("> ul").attr("role", "tablist");
-        this.find("> ul > li").attr("role", "presentation");
-        this.find("> ul > li > a").attr("role", "tab").attr("aria-selected", "false").attr("aria-expanded", "false").attr("tabindex", "-1");
-        this.find("> ul > li > a").first().attr("aria-selected", "true").attr("aria-expanded", "true").attr("tabindex", "0");
-        this.find("> div").attr("role", "tabpanel").attr("aria-hidden", "true").attr("tabindex", "-1");
-        this.find("> div").first().attr("aria-hidden", "false").attr("tabindex", "0");
-        this.find("> ul > li > a").each(function() {
+        var tabPanel = this.find("> div");
+        tabPanel.hide().addClass("cf-tabpanel");
+        tabPanel.first().show().addClass("active");
+        tabList.addClass("cf-tablist");
+        tabList.find("a").first().addClass("active");
+        tabList.attr("role", "tablist");
+        tabList.find("li").attr("role", "presentation");
+        tabList.find("a").attr("role", "tab").attr("aria-selected", "false").attr("aria-expanded", "false").attr("tabindex", "-1");
+        tabList.find("a").first().attr("aria-selected", "true").attr("aria-expanded", "true").attr("tabindex", "0");
+        tabPanel.attr("role", "tabpanel").attr("aria-hidden", "true").attr("tabindex", "-1");
+        tabPanel.first().attr("aria-hidden", "false").attr("tabindex", "0");
+        tabList.find("a").each(function() {
             var tabID = $(this).attr("href").substring(1);
             $(this).attr("id", "tablist-" + tabID).attr("aria-controls", tabID);
         });
-        this.find("> div").each(function() {
+        tabPanel.each(function() {
             var tabID = "tablist-" + $(this).attr("id");
-            console.log(tabID);
             $(this).attr("aria-labelledby", tabID);
         });
         this.find("> ul a").click(function(e) {

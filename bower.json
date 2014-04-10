@@ -18,8 +18,7 @@
   "main": "src/",
   "dependencies": {
     "jquery": "~1.11",
-    "cf-colors": "git://github.com/cfpb/cf-colors.git",
-    "cf-typography": "git://github.com/cfpb/cf-typography.git"
+    "cf-colors": "git://github.com/cfpb/cf-colors.git"
   },
   "exportsOverride": {
     "cf-*": {
