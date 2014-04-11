@@ -1,4 +1,4 @@
-/*! cf-tabs 2014-04-11 3:11:32 PM */
+/*! cf-tabs 2014-04-11 3:11:19 PM */
 (function($) {
     "use strict";
     $.fn.cfTabs = function() {

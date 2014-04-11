@@ -42,8 +42,9 @@
 
 
     // Attach a click handler to all tab anchor elements
-    this.find('> ul a').click(function(e) {
-      
+    this.find('> ul a').click(function(event) {
+      // prevent the anchor link from modifing the url. We don't want the brower scrolling down to the anchor.
+      event.preventDefault();
       // The entire tabset, the parent of the clicked tab
       var $thisTabset = $(this).closest('.tabs');
 
