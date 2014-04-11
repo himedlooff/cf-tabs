@@ -1,7 +1,7 @@
-
 (function( $ ) {
+  'use strict';
   $.fn.cfTabs = function() {
-  
+
     var tabList = this.find('> ul');
     var tabPanel = this.find('> div');
 

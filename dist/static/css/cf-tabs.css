@@ -394,15 +394,6 @@ ul {
 /* topdoc
     name: LESS notes
     family: cf-tabs
-    patterns:
-    - name: Variables
-      codenotes:
-        - "@btn-font-size: 14px;"
-        - "@btn-v-padding: 9px;"
-        - "@btn-v-padding-modifier-ie: .8;"
-      notes:
-        - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in IE for <button>'s and <inputs>'s
-          across various .btn styles. We should revisit this after adding normalize.css to see if this is still needed."
     tags:
     - cf-tabs
     - less

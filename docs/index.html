@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>cf-tabs docs</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/demo/demo.css">
+    <link rel="stylesheet" type="text/css" href="../dist/static/css/cf-tabs.css">
+    <link rel="stylesheet" type="text/css" href="static/demo/brackets.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="demo_header">
+        <h1 class="h5">cf-tabs docs</h1>
+      </header>
+      <ul class="demo-component-list">
+        <li id="less-notes" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">LESS notes</h1>
+        </li>
+        <li id="default-tab" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Default tab</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Default state</h3>
+              </header>
+              <section>
+<div class="tabs">
+    <ul>
+        <li><a href="#tabset1-tab1">First Tab</a></li>
+        <li><a href="#tabset1-tab2">Second Tab</a></li>
+        <li><a href="#tabset1-tab3">Third Tab</a></li>
+    </ul>
+    <div id="tabset1-tab1">
+        <h3>First Tab Heading</h3>
+        <p>Content</p>
+    </div>
+    <div id="tabset1-tab2">
+        <h3>Second Tab Heading</h3>
+        <p>Content</p>
+    </div>
+    <div id="tabset1-tab3">
+        <h3>Third Tab Heading</h3>
+        <p>Content</p>
+    </div>
+</div>
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;div class=&quot;tabs&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabset1-tab1&quot;&gt;First Tab&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabset1-tab2&quot;&gt;Second Tab&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#tabset1-tab3&quot;&gt;Third Tab&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div id=&quot;tabset1-tab1&quot;&gt;
+        &lt;h3&gt;First Tab Heading&lt;/h3&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tabset1-tab2&quot;&gt;
+        &lt;h3&gt;Second Tab Heading&lt;/h3&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;tabset1-tab3&quot;&gt;
+        &lt;h3&gt;Third Tab Heading&lt;/h3&gt;
+        &lt;p&gt;Content&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">/* TABS */
+.tabs {
+  margin: 0 0 1em;
+}
+.tabs ul.cf-tablist {
+  border-bottom: 4px solid #2cb34a;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.tabs ul.cf-tablist:before,
+.tabs ul.cf-tablist:after {
+  content: &quot; &quot;;
+  display: table;
+}
+.tabs ul.cf-tablist:after {
+  clear: both;
+}
+.tabs ul.cf-tablist li {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.tabs ul.cf-tablist li a {
+  font-family: &quot;Avenir Next&quot;, Arial, sans-serif;
+  color: #101820;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: none;
+  background-color: #e3e4e5;
+  position: relative;
+  display: block;
+  top: 0;
+  margin-right: .5em;
+  padding: .5em 2em;
+}
+.tabs ul.cf-tablist li a.active {
+  background-color: #2cb34a;
+  color: #ffffff;
+}
+.tabs ul.cf-tablist li a.active:hover {
+  background-color: #addc91;
+  border: none;
+}
+.tabs ul.cf-tablist li a:hover {
+  background-color: #2cb34a;
+  color: #ffffff;
+}
+.tabs ul.cf-tablist li a:hover,
+.tabs ul.cf-tablist li a:focus {
+  /* over-ride bottom borders from CFPB global styles.css */
+  border-bottom: none;
+}
+.tabs .cf-tabpanel {
+  background: #ffffff;
+  padding: 1em 0;
+}
+.tabs .cf-tabpanel &gt; div {
+  min-height: 4em;
+}
+.tabs .cf-tabpanel &gt; div:before,
+.tabs .cf-tabpanel &gt; div:after {
+  content: &quot; &quot;;
+  display: table;
+}
+.tabs .cf-tabpanel &gt; div:after {
+  clear: both;
+}
+/* END TABS */</code></pre>
+          </div>
+        </li>
+      </ul>
+      <footer class="wrapper-footer">
+        <h4><a href="https://github.com/cfpb/cf-tabs">View the repository</a></h4>
+      </footer>
+    </div>
+    <script src="static/demo/main.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>

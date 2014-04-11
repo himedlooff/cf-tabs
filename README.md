@@ -14,7 +14,7 @@ If you would like to take advantage of more components or if you're new to Capit
 we encourage you to [start here](https://github.com/cfpb/capital-framework). (Coming soon.)
 
 - [View the docs](http://cfpb.github.io/cf-tabs/docs/)
-- [See the raw demo](http://cfpb.github.io/cf-tabs/demo/)
+- [See the raw demo](http://cfpb.github.io/cf-tabs/dist/cf-tabs.html)
 
 (Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).)
 

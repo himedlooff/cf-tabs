@@ -1,5 +1,6 @@
-/*! cf-tabs 2014-04-10 1:33:26 PM */
+/*! cf-tabs 2014-04-11 12:26:36 PM */
 (function($) {
+    "use strict";
     $.fn.cfTabs = function() {
         var tabList = this.find("> ul");
         var tabPanel = this.find("> div");

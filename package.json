@@ -36,6 +36,7 @@
     "grunt-topdoc": "~0.2.0",
     "grunt-contrib-watch": "latest",
     "grunt-contrib-connect": "latest",
+    "grunt-contrib-jshint": "latest",
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git"
   }
 }

@@ -87,7 +87,14 @@ module.exports = function(grunt) {
             'src/cf-tabs.js'
           ]
         }
-      }
+      },
+      demo: {
+        files: {
+          'docs/static/js/main.js': [
+            'vendor/jquery/jquery.js','src/cf-tabs.js'
+          ]
+        }
+      },
     },
 
 
@@ -105,6 +112,7 @@ module.exports = function(grunt) {
     * Copy is used to copy the files from the dist directory to docs and demo. 
     * dist is the output location of the other grunt tasks
     */
+    /*
     copy: {
       docs: {
         files:
@@ -125,7 +133,7 @@ module.exports = function(grunt) {
         }]
       }
     },
-
+*/
     watch: {
       scripts: {
         files: ['src/*'],
@@ -144,50 +152,62 @@ module.exports = function(grunt) {
           base: 'dist'
         }
       }
-    }
-
-/*
-    ,
-
-    topdoc: {
-      demo: {
-        options: {
-          source: 'demo/static/css/',
-          destination: 'demo/',
-          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
-          templateData: {
-            family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.homepage %>',
-            ltIE8Source: 'static/css/main.lt-ie8.min.css',
-            custom: '<%= grunt.file.read("demo/custom.html") %>'
-          }
+    },
+/**
+     * JSHint: https://github.com/gruntjs/grunt-contrib-jshint
+     * 
+     * Validate files with JSHint.
+     * Below are options that conform to idiomatic.js standards.
+     * Feel free to add/remove your favorites: http://www.jshint.com/docs/#options
+     */
+    jshint: {
+      options: {
+        camelcase: false,
+        curly: true,
+        forin: true,
+        immed: true,
+        latedef: true,
+        newcap: true,
+        noarg: true,
+        quotmark: true,
+        sub: true,
+        boss: true,
+        strict: true,
+        evil: true,
+        eqnull: true,
+        browser: true,
+        plusplus: false,
+        globals: {
+          jQuery: true,
+          $: true,
+          module: true,
+          require: true,
+          define: true,
+          console: true,
+          EventEmitter: true
         }
       },
+      all: ['dist/static/js/cf-tabs.js']
+    },
+
+    topdoc: {
       docs: {
         options: {
-          source: 'docs/static/css/',
+          source: 'dist/static/css/',
           destination: 'docs/',
-          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
+          template: 'node_modules/cf-component-demo/code_examples/',
           templateData: {
             family: '<%= pkg.name %>',
             title: '<%= pkg.name %> docs',
-            repo: '<%= pkg.homepage %>'
+            repo: '<%= pkg.homepage %>',
+            jsBody: 'static/js/main.js'
           }
         }
       }
     }
-*/
+
 
   });
-
-/*
-To-Do:
-watch
-tests
-topdoc
-serve
-*/
 
   /**
    * The above tasks are loaded here.
@@ -199,6 +219,7 @@ serve
   grunt.loadNpmTasks('grunt-html-build');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-topdoc');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
@@ -207,9 +228,9 @@ serve
    * Create custom task aliases and combinations
    */
   grunt.registerTask('vendor', ['bower']);
-  grunt.registerTask('demo', ['copy']);
-  grunt.registerTask('build', ['less', 'autoprefixer', 'uglify', 'htmlbuild', 'copy']);
+  //grunt.registerTask('demo', ['copy']);
+  grunt.registerTask('build', ['less', 'autoprefixer', 'uglify', 'htmlbuild']);
   grunt.registerTask('serve', ['connect:server','watch']);
-  grunt.registerTask('default', ['build', 'demo']);
+  grunt.registerTask('default', ['build']);
 
 };
