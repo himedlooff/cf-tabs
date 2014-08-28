@@ -1,0 +1,4416 @@
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy92ZW5kb3Ivbm9ybWFsaXplLWNzcy9ub3JtYWxpemUuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7OztBQVFBO0VBQ0UsdUJBQUE7O0VBQ0EsMEJBQUE7O0VBQ0EsOEJBQUE7Ozs7OztBQU9GO0VBQ0UsU0FBQTs7Ozs7Ozs7O0FBWUY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0VBQ0UsY0FBQTs7Ozs7O0FBUUY7QUFDQTtBQUNBO0FBQ0E7RUFDRSxxQkFBQTs7RUFDQSx3QkFBQTs7Ozs7OztBQVFGLEtBQUssSUFBSTtFQUNQLGFBQUE7RUFDQSxTQUFBOzs7Ozs7QUFRRjtBQUNBO0VBQ0UsYUFBQTs7Ozs7OztBQVVGO0VBQ0UsdUJBQUE7Ozs7O0FBT0YsQ0FBQztBQUNELENBQUM7RUFDQyxVQUFBOzs7Ozs7O0FBVUYsSUFBSTtFQUNGLHlCQUFBOzs7OztBQU9GO0FBQ0E7RUFDRSxpQkFBQTs7Ozs7QUFPRjtFQUNFLGtCQUFBOzs7Ozs7QUFRRjtFQUNFLGNBQUE7RUFDQSxnQkFBQTs7Ozs7QUFPRjtFQUNFLGdCQUFBO0VBQ0EsV0FBQTs7Ozs7QUFPRjtFQUNFLGNBQUE7Ozs7O0FBT0Y7QUFDQTtFQUNFLGNBQUE7RUFDQSxjQUFBO0VBQ0Esa0JBQUE7RUFDQSx3QkFBQTs7QUFHRjtFQUNFLFdBQUE7O0FBR0Y7RUFDRSxlQUFBOzs7Ozs7O0FBVUY7RUFDRSxTQUFBOzs7OztBQU9GLEdBQUcsSUFBSTtFQUNMLGdCQUFBOzs7Ozs7O0FBVUY7RUFDRSxnQkFBQTs7Ozs7QUFPRjtFQUNFLDRCQUFBO0VBQ0EsdUJBQUE7RUFDQSxTQUFBOzs7OztBQU9GO0VBQ0UsY0FBQTs7Ozs7QUFPRjtBQUNBO0FBQ0E7QUFDQTtFQUNFLGlDQUFBO0VBQ0EsY0FBQTs7Ozs7Ozs7Ozs7Ozs7QUFrQkY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtFQUNFLGNBQUE7O0VBQ0EsYUFBQTs7RUFDQSxTQUFBOzs7Ozs7QUFPRjtFQUNFLGlCQUFBOzs7Ozs7OztBQVVGO0FBQ0E7RUFDRSxvQkFBQTs7Ozs7Ozs7O0FBV0Y7QUFDQSxJQUFLLE1BQUs7QUFDVixLQUFLO0FBQ0wsS0FBSztFQUNILDBCQUFBOztFQUNBLGVBQUE7Ozs7OztBQU9GLE1BQU07QUFDTixJQUFLLE1BQUs7RUFDUixlQUFBOzs7OztBQU9GLE1BQU07QUFDTixLQUFLO0VBQ0gsU0FBQTtFQUNBLFVBQUE7Ozs7OztBQVFGO0VBQ0UsbUJBQUE7Ozs7Ozs7OztBQVdGLEtBQUs7QUFDTCxLQUFLO0VBQ0gsc0JBQUE7O0VBQ0EsVUFBQTs7Ozs7Ozs7QUFTRixLQUFLLGVBQWU7QUFDcEIsS0FBSyxlQUFlO0VBQ2xCLFlBQUE7Ozs7Ozs7QUFTRixLQUFLO0VBQ0gsNkJBQUE7O0VBQ0EsNEJBQUE7RUFDQSwrQkFBQTs7RUFDQSx1QkFBQTs7Ozs7OztBQVNGLEtBQUssZUFBZTtBQUNwQixLQUFLLGVBQWU7RUFDbEIsd0JBQUE7Ozs7O0FBT0Y7RUFDRSx5QkFBQTtFQUNBLGFBQUE7RUFDQSw4QkFBQTs7Ozs7O0FBUUY7RUFDRSxTQUFBOztFQUNBLFVBQUE7Ozs7OztBQU9GO0VBQ0UsY0FBQTs7Ozs7O0FBUUY7RUFDRSxpQkFBQTs7Ozs7OztBQVVGO0VBQ0UseUJBQUE7RUFDQSxpQkFBQTs7QUFHRjtBQUNBO0VBQ0UsVUFBQSJ9 */
+/*! normalize-legacy-addon | MIT License | https://github.com/cfpb/normalize-legacy-addon */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  *display: inline;
+  *zoom: 1;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/* 
+ * Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ * `em` units.
+*/
+html {
+  font-size: 100%;
+}
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  _font-family: 'courier new', monospace;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improves image quality when scaled in IE 7.
+ */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/*
+ * Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * Removes inner spacing in IE 7 without affecting normal text inputs.
+ * Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  *overflow: visible;
+}
+/*
+ * Removes excess padding in IE 7.
+ * Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  *height: 13px;
+  *width: 13px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy92ZW5kb3Ivbm9ybWFsaXplLWxlZ2FjeS1hZGRvbi9ub3JtYWxpemUtbGVnYWN5LWFkZG9uLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBVUE7QUFDQTtBQUNBO0VBQ0ksZ0JBQUE7RUFDQSxRQUFBOzs7Ozs7Ozs7QUFZSjtFQUNJLGVBQUE7Ozs7OztBQVFKO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7RUFDSSx1QkFBQTs7Ozs7Ozs7OztBQWFKO0VBQ0ksZ0JBQUE7O0FBR0o7RUFDSSxnQkFBQTtFQUNBLGdCQUFBOztBQUdKO0VBQ0ksaUJBQUE7RUFDQSxhQUFBOztBQUdKO0VBQ0ksY0FBQTtFQUNBLGdCQUFBOztBQUdKO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTs7QUFHSjtFQUNJLGlCQUFBO0VBQ0EsZ0JBQUE7O0FBR0o7RUFDSSxnQkFBQTs7Ozs7QUFPSjtBQUNBO0VBQ0ksYUFBQTs7Ozs7QUFPSjtBQUNBO0FBQ0E7QUFDQTtFQUNJLGNBQWMsd0JBQWQ7Ozs7O0FBT0o7RUFDSSxnQkFBQTtFQUNBLHFCQUFBOzs7OztBQU9KO0VBQ0ksWUFBQTs7Ozs7QUFPSixDQUFDO0FBQ0QsQ0FBQztFQUNHLFNBQVMsRUFBVDtFQUNBLGFBQUE7Ozs7Ozs7O0FBV0o7QUFDQTtBQUNBO0FBQ0E7RUFDSSxhQUFBOztBQUdKO0VBQ0ksa0JBQUE7Ozs7O0FBT0o7QUFDQTtBQUNBO0VBQ0ksbUJBQUE7Ozs7O0FBT0osR0FBSTtBQUNKLEdBQUk7RUFDQSxnQkFBQTtFQUNBLHNCQUFBOzs7Ozs7OztBQVdKO0VBQ0ksK0JBQUE7Ozs7Ozs7O0FBV0o7RUFDSSxTQUFBOzs7Ozs7O0FBU0o7RUFDSSxTQUFBOztFQUNBLG1CQUFBOztFQUNBLGtCQUFBOzs7Ozs7QUFPSjtBQUNBO0FBQ0E7QUFDQTtFQUNJLHdCQUFBO0VBQ0EsdUJBQUE7Ozs7OztBQVFKO0FBQ0EsSUFBSyxNQUFLO0FBQ1YsS0FBSztBQUNMLEtBQUs7RUFDRCxrQkFBQTs7Ozs7O0FBUUosS0FBSztBQUNMLEtBQUs7RUFDRCxhQUFBO0VBQ0EsWUFBQSJ9 */
+@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=44e8c964-4684-44c6-a6e3-3f3da8787b50);
+/* ==========================================================================
+   Capital Framework
+   Tab Styling
+   ========================================================================== */
+/* topdoc
+    name: Tabs
+    family: cf-tabs
+    patterns:
+    - name: Default tabs pattern
+      markup: |
+        <div class="tabs">
+            <ul class="tabs_list">
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab1">First Tab</a>
+                </li>
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab2">Second Tab</a>
+                </li>
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab3">Third Tab</a>
+                </li>
+            </ul>
+            <div class="tabs_panel" id="tabset1-tab1">
+                <h3>First Tab Heading</h3>
+                <p>First tab content</p>
+            </div>
+            <div class="tabs_panel" id="tabset1-tab2">
+                <h3>Second Tab Heading</h3>
+                <p>Second tab content</p>
+            </div>
+            <div class="tabs_panel" id="tabset1-tab3">
+                <h3>Third Tab Heading</h3>
+                <p>Third tab content</p>
+            </div>
+        </div>
+    tags:
+    - cf-tabs
+*/
+.tabs {
+  margin: 0 0 1em;
+}
+.tabs_list {
+  margin: 0;
+  padding: 0;
+  border-bottom: 4px solid #2cb34a;
+  list-style-type: none;
+}
+.tabs_list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lt-ie8 .tabs_list {
+  zoom: 1;
+}
+.tabs_list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lt-ie8 .tabs_list {
+  zoom: 1;
+}
+.tabs_list-item {
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+.tabs_tab {
+  display: block;
+  margin-right: .5em;
+  padding: 0.5em 1.875em;
+  border: none;
+  background-color: #e3e4e5;
+  color: #101820;
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+}
+.tabs_tab em,
+.tabs_tab i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .tabs_tab em,
+.lt-ie9 .tabs_tab i {
+  font-style: normal !important;
+}
+.lt-ie9 .tabs_tab em,
+.lt-ie9 .tabs_tab i {
+  font-style: normal !important;
+}
+.tabs_tab strong,
+.tabs_tab b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .tabs_tab strong,
+.lt-ie9 .tabs_tab b {
+  font-weight: normal !important;
+}
+.lt-ie9 .tabs_tab strong,
+.lt-ie9 .tabs_tab b {
+  font-weight: normal !important;
+}
+.tabs_tab em,
+.tabs_tab i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .tabs_tab em,
+.lt-ie9 .tabs_tab i {
+  font-style: normal !important;
+}
+.lt-ie9 .tabs_tab em,
+.lt-ie9 .tabs_tab i {
+  font-style: normal !important;
+}
+.tabs_tab strong,
+.tabs_tab b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .tabs_tab strong,
+.lt-ie9 .tabs_tab b {
+  font-weight: normal !important;
+}
+.lt-ie9 .tabs_tab strong,
+.lt-ie9 .tabs_tab b {
+  font-weight: normal !important;
+}
+.tabs_tab:hover,
+.tabs_tab.is-active {
+  border: none;
+  background-color: #2cb34a;
+  color: #ffffff;
+}
+.tabs_tab:focus {
+  background-color: #addc91;
+  outline: 1px dotted #0072ce;
+  color: #101820;
+}
+.tabs_tab.is-active:hover {
+  background-color: #addc91;
+  border-bottom-width: 0;
+}
+.tabs_panel {
+  padding-top: 0.9375em;
+}
+.tabs_panel:focus {
+  outline: 1px dotted #0072ce;
+}
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Base styles
+   ========================================================================== */
+/*
+ * Source: http://fast.fonts.net/cssapi/44e8c964-4684-44c6-a6e3-3f3da8787b50.css
+ * This file has been edited to use absolute URLS so we can concatenate it with
+ * all of our other styles.
+ */
+@font-face {
+  font-family: "AvenirNextLTW01-Regular";
+  src: url("//fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Regular";
+  src: url("//fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/1e9892c0-6927-4412-9874-1b82801ba47a.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/52a192b1-bea5-4b48-879f-107f009b666f.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Italic";
+  src: url("//fast.fonts.net/dv2/2/d1fddef1-d940-4904-8f6c-17e809462301.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Italic";
+  src: url("//fast.fonts.net/dv2/2/d1fddef1-d940-4904-8f6c-17e809462301.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/92b66dbd-4201-4ac2-a605-4d4ffc8705cc.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/18839597-afa8-4f0b-9abb-4a30262d0da8.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585") format("svg");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Medium";
+  src: url("//fast.fonts.net/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Medium";
+  src: url("//fast.fonts.net/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/f26faddb-86cc-4477-a253-1e1287684336.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#a89d6ad1-a04f-4a8f-b140-e55478dbea80") format("svg");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Demi";
+  src: url("//fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Demi";
+  src: url("//fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/99affa9a-a5e9-4559-bd07-20cf0071852d.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#99affa9a-a5e9-4559-bd07-20cf0071852d") format("svg");
+  font-style: normal;
+  font-weight: 700;
+}
+/* topdoc
+  name: Webfonts
+  family: cf-core
+  patterns:
+    - name: Licensed webfonts
+      notes:
+        - "Avenir Next is included via the licensed-fonts.css file.
+          This file contains absolute links to our paid font service.
+          Fonts included this way will only work on CFPB-registered domains."
+        - "Note that when using Avenir Regular we automatically fix faux italic
+          and bold issues by overriding i, em, b, and strong tags to use the
+          appropriate fonts."
+    - name: Webfont mixins
+      codenotes:
+        - ".webfont-regular()"
+        - ".webfont-italic()"
+        - ".webfont-medium()"
+        - ".webfont-demi()"
+      notes:
+        - "Use these mixins to easily add the Avenir Next font family to your
+          elements."
+        - "To avoid faux bold and italics in Avenir Next, you must use the font
+          family name for that particular style. So when defining an italic or
+          bold style in Avenir Next you need to use the Avenir Next Italic font
+          family. Use the mixins when setting bold or italic text as they also
+          set the appropriate font-weight and font-style."
+        - "These mixins also add the appropriate .lt-ie9 overrides.
+          .lt-ie9 overrides are necessary to override font-style and font-weight
+          each time the webfont is used. These overrides are built into the webfont
+          mixins so you get them automatically. Note that this requires you to
+          use conditional classes on the <html> element:
+          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Type hierarchy
+  family: cf-core
+  patterns:
+    - name: Default body type
+      markup: |
+        <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - name: Heading level 1
+      markup: |
+        <h1>Example heading element</h1>
+        <p class="h1">A non-heading element</p>
+    - name: Heading level 2
+      markup: |
+        <h2>Example heading element</h2>
+        <p class="h2">A non-heading element</p>
+    - name: Heading level 3
+      markup: |
+        <h3>Example heading element</h3>
+        <p class="h3">A non-heading element</p>
+    - name: Heading level 4
+      markup: |
+        <h4>Example heading element</h4>
+        <p class="h4">A non-heading element</p>
+    - name: Heading level 5
+      markup: |
+        <h5>Example heading element</h5>
+        <p class="h5">A non-heading element</p>
+    - name: Heading level 6
+      markup: |
+        <h6>Example heading element</h6>
+        <p class="h6">A non-heading element</p>
+    - name: Super header
+      markup: |
+        <h1 class="superheader">Example super heading</h1>
+        <p class="superheader">Example super heading</p>
+  tags:
+    - cf-core
+*/
+body {
+  color: #101820;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 100%;
+  line-height: 1.375;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.47058824em;
+  font-size: 2.125em;
+  line-height: 1.29411765;
+}
+h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+}
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+}
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: 0.27777778em;
+  font-size: 1.125em;
+  font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.22222222;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+h5,
+h6,
+.h5,
+.h6 {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+h5,
+.h5 {
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+}
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.41666667em;
+  font-size: 0.75em;
+  line-height: 1.83333333;
+}
+.superheader {
+  margin-bottom: 0.1875em;
+  font-size: 3em;
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.375;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Margins
+  family: cf-core
+  patterns:
+    - name: Consistent vertical margins
+      notes:
+        - "Assumes that the font size of each of these items remains the default."
+      markup: |
+        <p>Paragraph margin example</p>
+        <p>Paragraph margin example</p>
+  tags:
+    - cf-core
+*/
+p,
+ul,
+ol,
+dl,
+table,
+figure {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+/* topdoc
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-core
+  patterns:
+    - name: Default state
+      markup: |
+        <a href="#">Default link style</a>
+    - name: Visited state
+      markup: |
+        <a href="#" class="visited">Visited link style</a>
+    - name: Hovered state
+      markup: |
+        <a href="#" class="hover">Hovered link style</a>
+    - name: Focused state
+      markup: |
+        <a href="#" class="focus">Focused link style</a>
+    - name: Active state
+      markup: |
+        <a href="#" class="active">Active link style</a>
+  tags:
+    - cf-core
+*/
+a {
+  border-width: 0;
+  border-style: dotted;
+  border-color: #0072ce;
+  color: #0072ce;
+  text-decoration: none;
+}
+a:visited,
+a.visited {
+  border-color: #005e5d;
+  color: #005e5d;
+}
+a:hover,
+a.hover {
+  border-style: solid;
+  border-color: #7fb8e6;
+  color: #7fb8e6;
+}
+a:focus,
+a.focus {
+  border-style: solid;
+  outline: thin dotted;
+}
+a:active,
+a.active {
+  border-style: solid;
+  border-color: #002d72;
+  color: #002d72;
+}
+/* topdoc
+  name: Underlined links
+  family: cf-core
+  patterns:
+    - name: States
+      notes:
+        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+          be used in production."
+        - "The underline style properties are mostly set above in the a tag.
+          To enable the underline simply set a bottom-border-width as done here."
+      markup: |
+        <p>
+            <a href="#">Default</a>,
+            <a href="#" class="visited">Visited</a>,
+            <a href="#" class="hover">Hovered</a>,
+            <a href="#" class="focus">Focused</a>,
+            <a href="#" class="active">Active</a>
+        </p>
+    - name: Underline conditions
+      notes:
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
+      markup: |
+        <p>
+            <a href="#">A child of a paragraph</a>
+        </p>
+        <ul>
+            <li>
+                <a href="#">A child of a list item</a>
+            </li>
+        </ul>
+        <dl>
+            <dt>
+                Definition list term
+            </dt>
+            <dd>
+                <a href="#">A child of a definition list description</a>
+            </dd>
+        </dl>
+    - name: Exceptions for underlined links
+      notes:
+        - "Inline text links inside of a nav element are not underlined."
+      markup: |
+        <nav>
+            <p>
+                <a href="#">A child of a paragraph</a>
+            </p>
+            <ul>
+                <li>
+                    <a href="#">A child of a list item</a>
+                </li>
+            </ul>
+            <dl>
+                <dt>
+                    Definition list term
+                </dt>
+                <dd>
+                    <a href="#">A child of a definition list description</a>
+                </dd>
+            </dl>
+        </nav>
+  tags:
+    - cf-core
+*/
+p a,
+li a,
+dd a {
+  border-bottom-width: 1px;
+}
+nav a {
+  border-bottom-width: 0;
+}
+/* topdoc
+  name: Lists
+  family: cf-core
+  patterns:
+    - name: Unordered list
+      markup: |
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
+    - cf-core
+*/
+ul {
+  list-style: square;
+}
+/* topdoc
+  name: Tables
+  family: cf-core
+  patterns:
+    - name: Standard table
+      markup: |
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+    - name: Compact table
+      markup: |
+        <table class="compact-table">
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+      notes:
+        - Reduces cell padding to 10px.
+  tags:
+    - cf-core
+*/
+table {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+table em,
+table i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+table em,
+table i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+th,
+td {
+  padding: 0.75em 0.9375em;
+  background: #f8f8f8;
+}
+thead th,
+thead td {
+  color: #ffffff;
+  background: #43484e;
+}
+tbody > tr:nth-child(odd) > th,
+tbody > tr:nth-child(odd) > td {
+  background: #f1f2f2;
+}
+.compact-table th,
+.compact-table td {
+  padding: 0.4375em 0.625em;
+}
+th {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Block quote
+  family: cf-core
+  patterns:
+    - name: Default block quote
+      markup: |
+        <blockquote cite="link-to-source">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+            similique fugit hic eligendi praesentium officiis illum optio iusto
+            commodi eum tempore nisi ad in perferendis enim quo dolores.
+            Reprehenderit similique earum quibusdam possimus vitae esse
+            nesciunt mollitia sed beatae aliquid dolores iure a impedit quam
+            minus eum modi illum ducimus eligendi eveniet labore non sequi
+            voluptate et totam praesentium animi itaque asperiores dolorum
+            sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
+            veniam officiis ducimus voluptatum ut necessitatibus non!
+        </blockquote>
+      notes:
+        - "Use a block quote to quote from an external work. See .pull-quote if
+          you need to highlight an excerpt from the current work."
+        - "It is best practice to document the URL of a quoted work using the
+          cite attribute."
+  tags:
+    - cf-core
+*/
+blockquote {
+  margin: 1.25em;
+}
+@media only all and (min-width: 37.5em) {
+  blockquote {
+    margin: 1.75em 2.5em;
+  }
+}
+/* topdoc
+  name: Pull quote
+  family: cf-core
+  patterns:
+    - name: Default pull quote
+      markup: |
+        <aside class="pull-quote">
+            <div class="pull-quote_body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum!
+            </div>
+            <footer>
+                <cite class="pull-quote_citation">
+                    - Author Name
+                </cite>
+            <footer>
+        </aside>
+      notes:
+        - "Use a pull quote to highlight excerpts from the current work.
+          This is not to be confused with blockquote which quotes from an
+          external work."
+        - "Since a pull quote is an excerpt and repeats content from the
+          article it's contained within you should use the aside element."
+    - name: Large pull quote
+      markup: |
+        <aside class="pull-quote pull-quote__large">
+            <div class="pull-quote_body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum!
+            </div>
+            <footer>
+                <cite class="pull-quote_citation">
+                    - Author Name
+                </cite>
+            <footer>
+        </aside>
+  tags:
+    - cf-core
+*/
+.pull-quote_body {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+  margin-bottom: 0.54545455em;
+  color: #101820;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_citation {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  color: #75787b;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+  margin-bottom: 0.69230769em;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+/* topdoc
+    name: Form labels
+    family: cf-core
+    notes:
+      - "Visit https://github.com/cfpb/cf-forms for advanced form label patterns."
+    patterns:
+    - name: Default label
+      markup: |
+        <label>Form label</label>
+    tags:
+    - cf-core
+*/
+label {
+  display: block;
+}
+/* topdoc
+    name: Form elements
+    family: cf-core
+    notes:
+      - "The .focus class is only included for documentation demos and should
+         not be used in production."
+      - "Visit https://github.com/cfpb/cf-forms for advanced form field patterns."
+    patterns:
+    - name: type="text"
+      markup: |
+        <input type="text" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="text" value="">
+        <input class="focus" type="text" value="Lorem ipsum">
+    - name: type="search"
+      markup: |
+        <input type="search" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="search" value="">
+        <input class="focus" type="search" value="Lorem ipsum">
+    - name: type="email"
+      markup: |
+        <input type="email" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="email" value="">
+        <input class="focus" type="email" value="Lorem ipsum">
+    - name: type="url"
+      markup: |
+        <input type="url" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="url" value="">
+        <input class="focus" type="url" value="Lorem ipsum">
+    - name: type="tel"
+      markup: |
+        <input type="tel" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="tel" value="">
+        <input class="focus" type="tel" value="Lorem ipsum">
+    - name: type="number"
+      markup: |
+        <input type="number" value="1000">
+        <input placeholder="Lorem ipsum" type="number" value="">
+        <input class="focus" type="number" value="1000">
+    - name: textarea
+      markup: |
+        <textarea>Lorem ipsum</textarea>
+        <textarea class="focus">Lorem ipsum</textarea>
+    - name: multi-select
+      markup: |
+        <select multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+        <select class="focus" multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+    tags:
+    - cf-core
+*/
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select[multiple] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.375em;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid #75787b;
+  border-radius: 0;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="search"]:focus,
+input[type="search"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="url"]:focus,
+input[type="url"].focus,
+input[type="tel"]:focus,
+input[type="tel"].focus,
+input[type="number"]:focus,
+input[type="number"].focus,
+textarea:focus,
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
+  border: 1px solid #0072ce;
+  outline: 1px solid #0072ce;
+  outline-offset: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+::-webkit-input-placeholder {
+  color: #75787b;
+}
+::-moz-placeholder {
+  color: #75787b;
+}
+:-ms-input-placeholder {
+  color: #75787b;
+}
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Color variables
+   ========================================================================== */
+/* ==========================================================================
+   Capital Framework
+   Core Less file
+   ========================================================================== */
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*! normalize-legacy-addon | MIT License | https://github.com/cfpb/normalize-legacy-addon */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  *display: inline;
+  *zoom: 1;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/* 
+ * Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ * `em` units.
+*/
+html {
+  font-size: 100%;
+}
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  _font-family: 'courier new', monospace;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improves image quality when scaled in IE 7.
+ */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/*
+ * Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * Removes inner spacing in IE 7 without affecting normal text inputs.
+ * Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  *overflow: visible;
+}
+/*
+ * Removes excess padding in IE 7.
+ * Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  *height: 13px;
+  *width: 13px;
+}
+/* ==========================================================================
+   Capital Framework
+   Color variables
+   ========================================================================== */
+/* ==========================================================================
+   Capital Framework
+   Less variables
+   ========================================================================== */
+/* topdoc
+  name: Less variables
+  family: cf-core
+  patterns:
+    - name: Font sizes
+      codenotes:
+        - "@base-font-size-px: 16px;"
+        - "@base-line-height-px: 22px;"
+        - "@base-line-height: unit(@base-line-height-px / @base-font-size-px);"
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Media queries
+   ========================================================================== */
+/* topdoc
+  name: Media query mixins
+  family: cf-core
+  notes:
+    - "These mixins allow us to write consistent media queries using pixel
+      values, which are easier to remember. The mixins handle converting the
+      pixels into em's."
+  patterns:
+    - name: "min-width/max-width media queries"
+      codenotes:
+        - ".respond-to-min(@bp, @rules)"
+        - ".respond-to-max(@bp, @rules)"
+      notes:
+        - "@bp: the breakpoint size in pixels. It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query usage"
+      codenotes:
+        - |
+            .respond-to-min(768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+    - name: "min-width/max-width media query range"
+      codenotes:
+        - ".respond-to-range(@bp1, @bp2, @rules)"
+      notes:
+        - "@bp1: the min-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@bp2: the max-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query range usage"
+      codenotes:
+        - |
+            .respond-to-range(320px, 768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 20em) and (max-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+  tags:
+    - cf-core
+*/
+/* topdoc
+    name: EOF
+    eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Utilities
+   ========================================================================== */
+/* topdoc
+  name: Clearfix
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <div class="u-clearfix">
+            <div style="float:left; width:100%; height:60px; background:black;"></div>
+        </h1>
+      codenotes:
+        - .u-clearfix;
+      notes:
+        - "Use this class to clear floats. For example, without .u-clearfix the
+           black box would spill into the markup section."
+        - "More information: http://css-tricks.com/snippets/css/clear-fix/"
+  tags:
+    - cf-core
+*/
+.u-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lt-ie8 .u-clearfix {
+  zoom: 1;
+}
+/* topdoc
+  name: Visually hidden
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <h1>
+            <a href="#">
+                <span class="cf-icon cf-icon-twitter-square"></span>
+                <span class="u-visually-hidden">Share on Twitter</span>
+            </a>
+        </h1>
+      codenotes:
+        - .u-visually-hidden;
+      notes:
+        - "Use this class to hide something from view while keeping it
+          accessible to screen readers."
+  tags:
+    - cf-core
+*/
+.u-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/* topdoc
+  name: Inline block
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-inline-block;
+      notes:
+        - "Also adds a .lt-ie8 class to hack inline-block for IE 7 and below."
+  tags:
+    - cf-core
+*/
+.u-inline-block {
+  display: inline-block;
+}
+.lt-ie8 .u-inline-block {
+  display: inline;
+}
+/* topdoc
+  name: Floating right
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-right;
+      notes:
+        - "IE7 float: right drop bug fixes:"
+        - "1. If the float: right follows an element in the html structure that
+          should be to its left (and not above it), then that preceding
+          element(s) must be float: left.
+          http://stackoverflow.com/questions/10981767/clean-css-fix-of-ie7s-float-right-drop-bug#answer-11437688"
+        - "2. Simply change the markup order so that the element floating right
+          comes before the element to its left."
+  tags:
+    - cf-core
+*/
+.u-right {
+  float: right;
+}
+/* topdoc
+  name: Align with button
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - ".u-align-with-btn(@font-size: @base-font-size-px);"
+      notes:
+        - "Adds top padding (among other things) to help alignment with buttons."
+        - "If you pass no arguments then the padding will be calculated using
+          @base-font-size-px."
+        - "Pass one argument to use a custom font size to calculate the top
+          padding."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Flexible proportional containers
+  family: cf-core
+  notes:
+    - "Utilizes intrinsic ratios to create a flexible container that retains its
+      aspect ratio. When image tags scale they retain their aspect ratio, but if
+      you need a flexible video you will need to use this mixin."
+    - "You can read more about intrinsic rations here:
+      http://alistapart.com/article/creating-intrinsic-ratios-for-video"
+  patterns:
+    - name: Default example
+      markup: |
+        <div class="u-flexible-container">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      notes:
+        - "Defaults to a 16:19 ratio."
+        - "Original mixin credit: https://gist.github.com/craigmdennis/6655047"
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+            .u-flexible-container_inner
+    - name: Background image examples
+      markup: |
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+             ">
+        </div>
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+               background-size: cover;
+             ">
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+      notes:
+        - "If you're not using the video or object elements and all you need is
+          a proportionally cropped or scaling background image with a fluid
+          container then you can leave out u-flexible-container_inner."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+    - name: 4-3 modifier
+      markup: |
+        <div class="u-flexible-container u-flexible-container__4-3">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container.u-flexible-container__4-3
+            .u-flexible-container_inner
+      notes:
+        - "Create your own aspect ratios by using this modifier as an example."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+  tags:
+    - cf-core
+*/
+.u-flexible-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.u-flexible-container_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.u-flexible-container__4-3 {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}
+/* topdoc
+  name: Link mixins
+  family: cf-core
+  patterns:
+    - codenotes:
+        - .u-link__colors();
+      notes:
+        - "Pass this mixin no arguments to color your link states with the
+          following defaults: :link (default state) pacific, :hover pacific-50,
+          :focus: pacific, :visited teal, :active navy."
+    - codenotes:
+        - .u-link__colors(@c);
+      notes:
+        - "Pass this mixin one color to be used on all of the following
+          states of your link; :link (default state), :visited, :hover, :focus,
+          :active."
+    - codenotes:
+        - .u-link__colors(@c, @h);
+      notes:
+        - "Pass this mixin two colors to use the first color for the :link,
+          :visited, and :active states, and the second color for the :hover and
+          :focus states."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a);
+      notes:
+        - "Pass this mixin five colors in 'love/hate' mnemonic order to color
+          :link, :visited, :hover, :focus, and :active states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use
+          .u-link__colors(@c, @v, @h, @f, @a) to promote consistency."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);
+      notes:
+        - "Allows you to color text and the bottom border separately."
+        - "The first five colors in 'love/hate' mnemonic order will color text
+          for the :link, :visited, :hover, :focus, and :active states
+          respectively. The last five colors in 'love/hate' mnemonic order will
+          color the bottom border for the :link, :visited, :hover, :focus, and
+          :active states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we
+          encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)
+          to promote consistency."
+    - codenotes:
+        - .u-link__colors-base(@c, @v, @h, @f, @a);
+      notes:
+        - "This is the base mixin that all .u-link__colors() mixins use. Please
+          refrain from using this mixin directly in order to promote a
+          consistent use of mixin names for coloring links throughout this
+          project. Remember that if you need to set colors for all states of a
+          link you should use .u-link__colors(@c, @v, @h, @f, @a)."
+    - codenotes:
+        - .u-link__border();
+      notes:
+        - "Forces the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__no-border();
+      notes:
+        - "Turn off the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__hover-border();
+      notes:
+        - "Turn off the default bottom border on the :link state and force a
+          bottom border on the :hover state."
+    - codenotes:
+        - .u-link-child__hover();
+      notes:
+        - "When a link has child elements you may want only certain children to
+          change color when the parent link is hovered.
+          Pass no arguments to this mixin to color the child element pacific
+          when the parent link is hovered."
+    - codenotes:
+        - .u-link-child__hover(@c);
+      notes:
+        - "Pass this mixin one color to color the child element when the parent
+          link is hovered."
+  tags:
+    - cf-core
+*/
+/* topdoc
+    name: EOF
+    eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Base styles
+   ========================================================================== */
+/* topdoc
+  name: Webfonts
+  family: cf-core
+  patterns:
+    - name: Licensed webfonts
+      notes:
+        - "Avenir Next is included via the licensed-fonts.css file.
+          This file contains absolute links to our paid font service.
+          Fonts included this way will only work on CFPB-registered domains."
+        - "Note that when using Avenir Regular we automatically fix faux italic
+          and bold issues by overriding i, em, b, and strong tags to use the
+          appropriate fonts."
+    - name: Webfont mixins
+      codenotes:
+        - ".webfont-regular()"
+        - ".webfont-italic()"
+        - ".webfont-medium()"
+        - ".webfont-demi()"
+      notes:
+        - "Use these mixins to easily add the Avenir Next font family to your
+          elements."
+        - "To avoid faux bold and italics in Avenir Next, you must use the font
+          family name for that particular style. So when defining an italic or
+          bold style in Avenir Next you need to use the Avenir Next Italic font
+          family. Use the mixins when setting bold or italic text as they also
+          set the appropriate font-weight and font-style."
+        - "These mixins also add the appropriate .lt-ie9 overrides.
+          .lt-ie9 overrides are necessary to override font-style and font-weight
+          each time the webfont is used. These overrides are built into the webfont
+          mixins so you get them automatically. Note that this requires you to
+          use conditional classes on the <html> element:
+          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Type hierarchy
+  family: cf-core
+  patterns:
+    - name: Default body type
+      markup: |
+        <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - name: Heading level 1
+      markup: |
+        <h1>Example heading element</h1>
+        <p class="h1">A non-heading element</p>
+    - name: Heading level 2
+      markup: |
+        <h2>Example heading element</h2>
+        <p class="h2">A non-heading element</p>
+    - name: Heading level 3
+      markup: |
+        <h3>Example heading element</h3>
+        <p class="h3">A non-heading element</p>
+    - name: Heading level 4
+      markup: |
+        <h4>Example heading element</h4>
+        <p class="h4">A non-heading element</p>
+    - name: Heading level 5
+      markup: |
+        <h5>Example heading element</h5>
+        <p class="h5">A non-heading element</p>
+    - name: Heading level 6
+      markup: |
+        <h6>Example heading element</h6>
+        <p class="h6">A non-heading element</p>
+    - name: Super header
+      markup: |
+        <h1 class="superheader">Example super heading</h1>
+        <p class="superheader">Example super heading</p>
+  tags:
+    - cf-core
+*/
+body {
+  color: #101820;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 100%;
+  line-height: 1.375;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.47058824em;
+  font-size: 2.125em;
+  line-height: 1.29411765;
+}
+h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+}
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+}
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: 0.27777778em;
+  font-size: 1.125em;
+  font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.22222222;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+h5,
+h6,
+.h5,
+.h6 {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+h5,
+.h5 {
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+}
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.41666667em;
+  font-size: 0.75em;
+  line-height: 1.83333333;
+}
+.superheader {
+  margin-bottom: 0.1875em;
+  font-size: 3em;
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.375;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Margins
+  family: cf-core
+  patterns:
+    - name: Consistent vertical margins
+      notes:
+        - "Assumes that the font size of each of these items remains the default."
+      markup: |
+        <p>Paragraph margin example</p>
+        <p>Paragraph margin example</p>
+  tags:
+    - cf-core
+*/
+p,
+ul,
+ol,
+dl,
+table,
+figure {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+/* topdoc
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-core
+  patterns:
+    - name: Default state
+      markup: |
+        <a href="#">Default link style</a>
+    - name: Visited state
+      markup: |
+        <a href="#" class="visited">Visited link style</a>
+    - name: Hovered state
+      markup: |
+        <a href="#" class="hover">Hovered link style</a>
+    - name: Focused state
+      markup: |
+        <a href="#" class="focus">Focused link style</a>
+    - name: Active state
+      markup: |
+        <a href="#" class="active">Active link style</a>
+  tags:
+    - cf-core
+*/
+a {
+  border-width: 0;
+  border-style: dotted;
+  border-color: #0072ce;
+  color: #0072ce;
+  text-decoration: none;
+}
+a:visited,
+a.visited {
+  border-color: #005e5d;
+  color: #005e5d;
+}
+a:hover,
+a.hover {
+  border-style: solid;
+  border-color: #7fb8e6;
+  color: #7fb8e6;
+}
+a:focus,
+a.focus {
+  border-style: solid;
+  outline: thin dotted;
+}
+a:active,
+a.active {
+  border-style: solid;
+  border-color: #002d72;
+  color: #002d72;
+}
+/* topdoc
+  name: Underlined links
+  family: cf-core
+  patterns:
+    - name: States
+      notes:
+        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+          be used in production."
+        - "The underline style properties are mostly set above in the a tag.
+          To enable the underline simply set a bottom-border-width as done here."
+      markup: |
+        <p>
+            <a href="#">Default</a>,
+            <a href="#" class="visited">Visited</a>,
+            <a href="#" class="hover">Hovered</a>,
+            <a href="#" class="focus">Focused</a>,
+            <a href="#" class="active">Active</a>
+        </p>
+    - name: Underline conditions
+      notes:
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
+      markup: |
+        <p>
+            <a href="#">A child of a paragraph</a>
+        </p>
+        <ul>
+            <li>
+                <a href="#">A child of a list item</a>
+            </li>
+        </ul>
+        <dl>
+            <dt>
+                Definition list term
+            </dt>
+            <dd>
+                <a href="#">A child of a definition list description</a>
+            </dd>
+        </dl>
+    - name: Exceptions for underlined links
+      notes:
+        - "Inline text links inside of a nav element are not underlined."
+      markup: |
+        <nav>
+            <p>
+                <a href="#">A child of a paragraph</a>
+            </p>
+            <ul>
+                <li>
+                    <a href="#">A child of a list item</a>
+                </li>
+            </ul>
+            <dl>
+                <dt>
+                    Definition list term
+                </dt>
+                <dd>
+                    <a href="#">A child of a definition list description</a>
+                </dd>
+            </dl>
+        </nav>
+  tags:
+    - cf-core
+*/
+p a,
+li a,
+dd a {
+  border-bottom-width: 1px;
+}
+nav a {
+  border-bottom-width: 0;
+}
+/* topdoc
+  name: Lists
+  family: cf-core
+  patterns:
+    - name: Unordered list
+      markup: |
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
+    - cf-core
+*/
+ul {
+  list-style: square;
+}
+/* topdoc
+  name: Tables
+  family: cf-core
+  patterns:
+    - name: Standard table
+      markup: |
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+    - name: Compact table
+      markup: |
+        <table class="compact-table">
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+      notes:
+        - Reduces cell padding to 10px.
+  tags:
+    - cf-core
+*/
+table {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+table em,
+table i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+table em,
+table i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+th,
+td {
+  padding: 0.75em 0.9375em;
+  background: #f8f8f8;
+}
+thead th,
+thead td {
+  color: #ffffff;
+  background: #43484e;
+}
+tbody > tr:nth-child(odd) > th,
+tbody > tr:nth-child(odd) > td {
+  background: #f1f2f2;
+}
+.compact-table th,
+.compact-table td {
+  padding: 0.4375em 0.625em;
+}
+th {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Block quote
+  family: cf-core
+  patterns:
+    - name: Default block quote
+      markup: |
+        <blockquote cite="link-to-source">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+            similique fugit hic eligendi praesentium officiis illum optio iusto
+            commodi eum tempore nisi ad in perferendis enim quo dolores.
+            Reprehenderit similique earum quibusdam possimus vitae esse
+            nesciunt mollitia sed beatae aliquid dolores iure a impedit quam
+            minus eum modi illum ducimus eligendi eveniet labore non sequi
+            voluptate et totam praesentium animi itaque asperiores dolorum
+            sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
+            veniam officiis ducimus voluptatum ut necessitatibus non!
+        </blockquote>
+      notes:
+        - "Use a block quote to quote from an external work. See .pull-quote if
+          you need to highlight an excerpt from the current work."
+        - "It is best practice to document the URL of a quoted work using the
+          cite attribute."
+  tags:
+    - cf-core
+*/
+blockquote {
+  margin: 1.25em;
+}
+@media only all and (min-width: 37.5em) {
+  blockquote {
+    margin: 1.75em 2.5em;
+  }
+}
+/* topdoc
+  name: Pull quote
+  family: cf-core
+  patterns:
+    - name: Default pull quote
+      markup: |
+        <aside class="pull-quote">
+            <div class="pull-quote_body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum!
+            </div>
+            <footer>
+                <cite class="pull-quote_citation">
+                    - Author Name
+                </cite>
+            <footer>
+        </aside>
+      notes:
+        - "Use a pull quote to highlight excerpts from the current work.
+          This is not to be confused with blockquote which quotes from an
+          external work."
+        - "Since a pull quote is an excerpt and repeats content from the
+          article it's contained within you should use the aside element."
+    - name: Large pull quote
+      markup: |
+        <aside class="pull-quote pull-quote__large">
+            <div class="pull-quote_body">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Cum corrupti tempora nam nihil qui mollitia consectetur
+                corporis nemo culpa dolorum!
+            </div>
+            <footer>
+                <cite class="pull-quote_citation">
+                    - Author Name
+                </cite>
+            <footer>
+        </aside>
+  tags:
+    - cf-core
+*/
+.pull-quote_body {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.22727273em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+  margin-bottom: 0.54545455em;
+  color: #101820;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_body em,
+.pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote_body em,
+.lt-ie9 .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote_body strong,
+.pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_body strong,
+.lt-ie9 .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote_citation {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+  color: #75787b;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote_citation {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 0.30769231em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+  margin-bottom: 0.69230769em;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.pull-quote__large .pull-quote_body em,
+.pull-quote__large .pull-quote_body i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body em,
+.lt-ie9 .pull-quote__large .pull-quote_body i {
+  font-style: normal !important;
+}
+.pull-quote__large .pull-quote_body strong,
+.pull-quote__large .pull-quote_body b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+.lt-ie9 .pull-quote__large .pull-quote_body strong,
+.lt-ie9 .pull-quote__large .pull-quote_body b {
+  font-weight: normal !important;
+}
+/* topdoc
+    name: Form labels
+    family: cf-core
+    notes:
+      - "Visit https://github.com/cfpb/cf-forms for advanced form label patterns."
+    patterns:
+    - name: Default label
+      markup: |
+        <label>Form label</label>
+    tags:
+    - cf-core
+*/
+label {
+  display: block;
+}
+/* topdoc
+    name: Form elements
+    family: cf-core
+    notes:
+      - "The .focus class is only included for documentation demos and should
+         not be used in production."
+      - "Visit https://github.com/cfpb/cf-forms for advanced form field patterns."
+    patterns:
+    - name: type="text"
+      markup: |
+        <input type="text" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="text" value="">
+        <input class="focus" type="text" value="Lorem ipsum">
+    - name: type="search"
+      markup: |
+        <input type="search" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="search" value="">
+        <input class="focus" type="search" value="Lorem ipsum">
+    - name: type="email"
+      markup: |
+        <input type="email" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="email" value="">
+        <input class="focus" type="email" value="Lorem ipsum">
+    - name: type="url"
+      markup: |
+        <input type="url" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="url" value="">
+        <input class="focus" type="url" value="Lorem ipsum">
+    - name: type="tel"
+      markup: |
+        <input type="tel" value="Lorem ipsum">
+        <input placeholder="Lorem ipsum" type="tel" value="">
+        <input class="focus" type="tel" value="Lorem ipsum">
+    - name: type="number"
+      markup: |
+        <input type="number" value="1000">
+        <input placeholder="Lorem ipsum" type="number" value="">
+        <input class="focus" type="number" value="1000">
+    - name: textarea
+      markup: |
+        <textarea>Lorem ipsum</textarea>
+        <textarea class="focus">Lorem ipsum</textarea>
+    - name: multi-select
+      markup: |
+        <select multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+        <select class="focus" multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+    tags:
+    - cf-core
+*/
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select[multiple] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.375em;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid #75787b;
+  border-radius: 0;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="search"]:focus,
+input[type="search"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="url"]:focus,
+input[type="url"].focus,
+input[type="tel"]:focus,
+input[type="tel"].focus,
+input[type="number"]:focus,
+input[type="number"].focus,
+textarea:focus,
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
+  border: 1px solid #0072ce;
+  outline: 1px solid #0072ce;
+  outline-offset: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+::-webkit-input-placeholder {
+  color: #75787b;
+}
+::-moz-placeholder {
+  color: #75787b;
+}
+:-ms-input-placeholder {
+  color: #75787b;
+}
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Media queries
+   ========================================================================== */
+/* topdoc
+  name: Media query mixins
+  family: cf-core
+  notes:
+    - "These mixins allow us to write consistent media queries using pixel
+      values, which are easier to remember. The mixins handle converting the
+      pixels into em's."
+  patterns:
+    - name: "min-width/max-width media queries"
+      codenotes:
+        - ".respond-to-min(@bp, @rules)"
+        - ".respond-to-max(@bp, @rules)"
+      notes:
+        - "@bp: the breakpoint size in pixels. It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query usage"
+      codenotes:
+        - |
+            .respond-to-min(768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+    - name: "min-width/max-width media query range"
+      codenotes:
+        - ".respond-to-range(@bp1, @bp2, @rules)"
+      notes:
+        - "@bp1: the min-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@bp2: the max-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query range usage"
+      codenotes:
+        - |
+            .respond-to-range(320px, 768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 20em) and (max-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+  tags:
+    - cf-core
+*/
+/* topdoc
+    name: EOF
+    eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Utilities
+   ========================================================================== */
+/* topdoc
+  name: Clearfix
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <div class="u-clearfix">
+            <div style="float:left; width:100%; height:60px; background:black;"></div>
+        </h1>
+      codenotes:
+        - .u-clearfix;
+      notes:
+        - "Use this class to clear floats. For example, without .u-clearfix the
+           black box would spill into the markup section."
+        - "More information: http://css-tricks.com/snippets/css/clear-fix/"
+  tags:
+    - cf-core
+*/
+.u-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lt-ie8 .u-clearfix {
+  zoom: 1;
+}
+/* topdoc
+  name: Visually hidden
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <h1>
+            <a href="#">
+                <span class="cf-icon cf-icon-twitter-square"></span>
+                <span class="u-visually-hidden">Share on Twitter</span>
+            </a>
+        </h1>
+      codenotes:
+        - .u-visually-hidden;
+      notes:
+        - "Use this class to hide something from view while keeping it
+          accessible to screen readers."
+  tags:
+    - cf-core
+*/
+.u-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/* topdoc
+  name: Inline block
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-inline-block;
+      notes:
+        - "Also adds a .lt-ie8 class to hack inline-block for IE 7 and below."
+  tags:
+    - cf-core
+*/
+.u-inline-block {
+  display: inline-block;
+}
+.lt-ie8 .u-inline-block {
+  display: inline;
+}
+/* topdoc
+  name: Floating right
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-right;
+      notes:
+        - "IE7 float: right drop bug fixes:"
+        - "1. If the float: right follows an element in the html structure that
+          should be to its left (and not above it), then that preceding
+          element(s) must be float: left.
+          http://stackoverflow.com/questions/10981767/clean-css-fix-of-ie7s-float-right-drop-bug#answer-11437688"
+        - "2. Simply change the markup order so that the element floating right
+          comes before the element to its left."
+  tags:
+    - cf-core
+*/
+.u-right {
+  float: right;
+}
+/* topdoc
+  name: Align with button
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - ".u-align-with-btn(@font-size: @base-font-size-px);"
+      notes:
+        - "Adds top padding (among other things) to help alignment with buttons."
+        - "If you pass no arguments then the padding will be calculated using
+          @base-font-size-px."
+        - "Pass one argument to use a custom font size to calculate the top
+          padding."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Flexible proportional containers
+  family: cf-core
+  notes:
+    - "Utilizes intrinsic ratios to create a flexible container that retains its
+      aspect ratio. When image tags scale they retain their aspect ratio, but if
+      you need a flexible video you will need to use this mixin."
+    - "You can read more about intrinsic rations here:
+      http://alistapart.com/article/creating-intrinsic-ratios-for-video"
+  patterns:
+    - name: Default example
+      markup: |
+        <div class="u-flexible-container">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      notes:
+        - "Defaults to a 16:19 ratio."
+        - "Original mixin credit: https://gist.github.com/craigmdennis/6655047"
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+            .u-flexible-container_inner
+    - name: Background image examples
+      markup: |
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+             ">
+        </div>
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+               background-size: cover;
+             ">
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+      notes:
+        - "If you're not using the video or object elements and all you need is
+          a proportionally cropped or scaling background image with a fluid
+          container then you can leave out u-flexible-container_inner."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+    - name: 4-3 modifier
+      markup: |
+        <div class="u-flexible-container u-flexible-container__4-3">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container.u-flexible-container__4-3
+            .u-flexible-container_inner
+      notes:
+        - "Create your own aspect ratios by using this modifier as an example."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+  tags:
+    - cf-core
+*/
+.u-flexible-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.u-flexible-container_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.u-flexible-container__4-3 {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}
+/* topdoc
+  name: Link mixins
+  family: cf-core
+  patterns:
+    - codenotes:
+        - .u-link__colors();
+      notes:
+        - "Pass this mixin no arguments to color your link states with the
+          following defaults: :link (default state) pacific, :hover pacific-50,
+          :focus: pacific, :visited teal, :active navy."
+    - codenotes:
+        - .u-link__colors(@c);
+      notes:
+        - "Pass this mixin one color to be used on all of the following
+          states of your link; :link (default state), :visited, :hover, :focus,
+          :active."
+    - codenotes:
+        - .u-link__colors(@c, @h);
+      notes:
+        - "Pass this mixin two colors to use the first color for the :link,
+          :visited, and :active states, and the second color for the :hover and
+          :focus states."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a);
+      notes:
+        - "Pass this mixin five colors in 'love/hate' mnemonic order to color
+          :link, :visited, :hover, :focus, and :active states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use
+          .u-link__colors(@c, @v, @h, @f, @a) to promote consistency."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);
+      notes:
+        - "Allows you to color text and the bottom border separately."
+        - "The first five colors in 'love/hate' mnemonic order will color text
+          for the :link, :visited, :hover, :focus, and :active states
+          respectively. The last five colors in 'love/hate' mnemonic order will
+          color the bottom border for the :link, :visited, :hover, :focus, and
+          :active states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we
+          encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)
+          to promote consistency."
+    - codenotes:
+        - .u-link__colors-base(@c, @v, @h, @f, @a);
+      notes:
+        - "This is the base mixin that all .u-link__colors() mixins use. Please
+          refrain from using this mixin directly in order to promote a
+          consistent use of mixin names for coloring links throughout this
+          project. Remember that if you need to set colors for all states of a
+          link you should use .u-link__colors(@c, @v, @h, @f, @a)."
+    - codenotes:
+        - .u-link__border();
+      notes:
+        - "Forces the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__no-border();
+      notes:
+        - "Turn off the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__hover-border();
+      notes:
+        - "Turn off the default bottom border on the :link state and force a
+          bottom border on the :hover state."
+    - codenotes:
+        - .u-link-child__hover();
+      notes:
+        - "When a link has child elements you may want only certain children to
+          change color when the parent link is hovered.
+          Pass no arguments to this mixin to color the child element pacific
+          when the parent link is hovered."
+    - codenotes:
+        - .u-link-child__hover(@c);
+      notes:
+        - "Pass this mixin one color to color the child element when the parent
+          link is hovered."
+  tags:
+    - cf-core
+*/
+/* topdoc
+    name: EOF
+    eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Less variables
+   ========================================================================== */
+/* topdoc
+  name: Less variables
+  family: cf-core
+  patterns:
+    - name: Font sizes
+      codenotes:
+        - "@base-font-size-px: 16px;"
+        - "@base-line-height-px: 22px;"
+        - "@base-line-height: unit(@base-line-height-px / @base-font-size-px);"
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy92ZW5kb3IvY2YtY29uY2F0L2NmLmxlc3MiLCJzcmMvdmVuZG9yL2NmLWNvcmUvY2YtdXRpbGl0aWVzLmxlc3MiLCJzcmMvdmVuZG9yL2NmLWNvcmUvY2YtYmFzZS5sZXNzIiwic3JjL3ZlbmRvci9jZi1jb3JlL2xpY2Vuc2VkLWZvbnRzLmNzcyIsInNyYy92ZW5kb3Ivbm9ybWFsaXplLWNzcy9ub3JtYWxpemUuY3NzIiwic3JjL3ZlbmRvci9ub3JtYWxpemUtbGVnYWN5LWFkZG9uL25vcm1hbGl6ZS1sZWdhY3ktYWRkb24uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXdDQTtFQUNJLGVBQUE7O0FBRUEsS0FBQztFQUVHLFNBQUE7RUFDQSxVQUFBO0VBQ0EsZ0NBQUE7RUFDQSxxQkFBQTs7QUN0QkosS0RpQkMsS0NqQkE7RUFDRyxTQUFTLEVBQVQ7RUFDQSxjQUFBO0VBQ0EsV0FBQTs7QUFFSixPQUFRLE1EWVA7RUNYRyxPQUFBOztBRHkvQkosS0E5K0JDLEtBOCtCQTtFQUNHLFNBQVMsRUFBVDtFQUNBLGNBQUE7RUFDQSxXQUFBOztBQUVKLE9BQVEsTUFuL0JQO0VBby9CRyxPQUFBOztBQTUrQkosS0FBQztFQUNHLFdBQUE7RUFDQSxTQUFBO0VBQ0EsVUFBQTs7QUFHSixLQUFDO0VBQ0csY0FBQTtFQUNBLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxZQUFBO0VBQ0EseUJBQUE7RUFDQSxjQUFBO0VFakJKLGFBQWEsNENBQWI7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VGaUJJLHFCQUFBOztBQXFGSixLQTdGQyxJQTZGQztBQUNGLEtBOUZDLElBOEZDO0VFekZGLGFBQWEsMkNBQWI7RUFDQSxrQkFBQTtFQUNBLG1CQUFBOztBRnFHQSxPQUFRLE1BNUdQLElBNkZDO0FBZUYsT0FBUSxNQTVHUCxJQThGQztFQWVFLDZCQUFBOztBRXJHSixPQUFRLE1GUlAsSUE2RkM7QUVyRkYs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 */

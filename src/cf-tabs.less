@@ -3,158 +3,95 @@
    Tab Styling
    ========================================================================== */
 
-/* http://nicolasgallagher.com/micro-clearfix-hack/ */
-
-.clearfix() {
-  &:before,
-  &:after {
-    content: " "; // 1
-    display: table; // 2
-  }
-  &:after {
-    clear: both;
-  }
-}
-
-@import "../vendor/cf-colors/cf-colors.less";
-@import "../vendor/cf-typography/cf-typography.less";
-
-@font-face {
-    font-family: "Avenir Next";
-    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/e9167238-3b3f-4813-a04a-a384394eed42.eot");
-    src: url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/e9167238-3b3f-4813-a04a-a384394eed42.eot?#iefix") format("embedded-opentype"),
-         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/1e9892c0-6927-4412-9874-1b82801ba47a.woff") format("woff"),
-         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf") format("truetype"),
-         url("http://www.consumerfinance.gov/wp-content/themes/cfpb_nemo/_/f/52a192b1-bea5-4b48-879f-107f009b666f.svg#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
-    font-weight: 400;
-    font-style: normal;
-}
-
-// LESS Font stack variables
-@sans-serif: "Avenir Next", Arial, sans-serif;
-@serif: Georgia, "Times New Roman", serif;
-
-
-
 /* topdoc
-    name: LESS notes
-    family: cf-tabs
-    tags:
-    - cf-tabs
-    - less
-*/
-
-
-
-
-/* topdoc
-    name: Default tab
+    name: Tabs
     family: cf-tabs
     patterns:
-    - name: Default state
+    - name: Default tabs pattern
       markup: |
         <div class="tabs">
-            <ul>
-                <li><a href="#tabset1-tab1">First Tab</a></li>
-                <li><a href="#tabset1-tab2">Second Tab</a></li>
-                <li><a href="#tabset1-tab3">Third Tab</a></li>
+            <ul class="tabs_list">
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab1">First Tab</a>
+                </li>
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab2">Second Tab</a>
+                </li>
+                <li class="tabs_list-item">
+                    <a class="tabs_tab" href="#tabset1-tab3">Third Tab</a>
+                </li>
             </ul>
-            <div id="tabset1-tab1">
+            <div class="tabs_panel" id="tabset1-tab1">
                 <h3>First Tab Heading</h3>
-                <p>Content</p>
+                <p>First tab content</p>
             </div>
-            <div id="tabset1-tab2">
+            <div class="tabs_panel" id="tabset1-tab2">
                 <h3>Second Tab Heading</h3>
-                <p>Content</p>
+                <p>Second tab content</p>
             </div>
-            <div id="tabset1-tab3">
+            <div class="tabs_panel" id="tabset1-tab3">
                 <h3>Third Tab Heading</h3>
-                <p>Content</p>
+                <p>Third tab content</p>
             </div>
         </div>
     tags:
     - cf-tabs
 */
 
-
-/* TABS */
 .tabs { 
     margin: 0 0 1em;
-
     
-    ul.cf-tablist {
-        .clearfix();
+    &_list {
+        .u-clearfix();
+        margin: 0;
+        padding: 0;
         border-bottom: 4px solid @green;
         list-style-type: none;
-        margin: 0; 
+    }
+
+    &_list-item {
+        float: left;
+        margin: 0;
         padding: 0;
+    }
 
-        li {
-            
-            float: left;
-            margin: 0;
-            padding: 0;
-            
-            a {
-                // font
-                font-family: @sans-serif;
-                color: @black;
-                cursor: pointer;
-                text-decoration: none;
-                // over-ride bottom borders from CFPB global styles.css 
-                border-bottom: none;
+    &_tab {
+        display: block; 
+        margin-right: .5em;
+        padding: unit(8px / @base-font-size-px, em) unit(30px / @base-font-size-px, em);
+        border: none;
+        background-color: @gray-20;
+        color: @black;
+        .webfont-regular();
+        text-decoration: none;
 
-                //tab color
-                background-color: @gray-20;
-
-                // position
-                position: relative; 
-                display: block; 
-                top: 0;
-
-                margin-right: .5em;
-                padding: .5em 2em;
-
-                &.active {
-                    background-color: @green;
-                    color: @white;
-
-                    &:hover {
-                        background-color: @green-midtone;
-                        border: none;
-                    }    
-                }
-
-                &:hover {
-                    background-color: @green;
-                    color: @white;
-
-                }
-
-                &:hover,
-                &:focus {
-                    /* over-ride bottom borders from CFPB global styles.css */
-                    border-bottom: none;
-                }
-            } //a
-        } //li
-    } //ul.cf-tablist
-
-
-    .cf-tabpanel {
-        background: @white;
-        padding: 1em 0;
-
-        > div {
-            .clearfix();
-            min-height: 4em;
+        &:hover,
+        &.is-active {
+            border: none;
+            background-color: @green;
+            color: @white;
         }
-        
-    } //cf-tabpanel
 
-} //tabs
-/* END TABS */
+        &:focus {
+            background-color: @green-midtone;
+            outline: 1px dotted @pacific;
+            color: @black;
+        }
 
+        &.is-active:hover {
+            background-color: @green-midtone;
+            border-bottom-width: 0;
+        }
+    }
+
+    &_panel {
+        padding-top: unit(15px / @base-font-size-px, em);
+
+        &:focus {
+            outline: 1px dotted @pacific;
+        }
+    }
+}
 
 /* topdoc
   name: EOF

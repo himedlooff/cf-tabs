@@ -2,235 +2,119 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  require('time-grunt')(grunt);
+
   var path = require('path');
+  var extend = require('node.extend');
 
-  grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+  /**
+   * Load the tasks we want to use, which are specified as dependencies in
+   * the package.json file of cf-grunt-config.
+   */
 
-    /* Delete out all the content from the following locations */
-    /*
-    clean: {
-      vendor: [
-        'demo',
-        'dist',
-        'docs'
-      ]
-    },
-    */
+  // Loads all Grunt tasks in the node_modules directory within the new CWD.
+  require('jit-grunt')(grunt, {
+    // Static mapping
+    // Needed when task name does not match package name
+    bower: 'grunt-bower-task'
+  })({
+    // Options
+    pluginsRoot: 'node_modules/cf-grunt-config/node_modules'
+  });
 
-    /* This tasks downloads only the "main" files from each repo listed in bower.json */
-    bower: {
-      install: {
-        options: {
-          targetDir: 'vendor',
-          install: true,
-          verbose: true,
-          cleanBowerDir: true,
-          cleanTargetDir: true,
-          layout: function(type, component) {
-            return path.join(component);
-          }
-        }
-      }
-    },
 
-    less: {
-      main: {
-        options: {
-          yuicompress: false
-        },
-        files: {
-          'dist/static/css/cf-tabs.css': [
-            'src/cf-tabs.less'
-          ]
-        }
-      }
-    },
+  /**
+   * Initialize a variable to represent the Grunt task configuration.
+   */
+  var config = {
 
-    autoprefixer: {
-      options: {
-        // Options we might want to enable in the future.
-        diff: false,
-        map: false
-      },
-      multiple_files: {
-        // Prefix all CSS files and overwrite.
-        expand: true,
-        src: 'dist/static/css/cf-tabs.css'
-      },
+    // Define a couple of utility variables that may be used in task options.
+    pkg: grunt.file.readJSON('bower.json'),
+    env: process.env,
+    opt: {
+      // Include path to compiled extra CSS for IE7 and below.
+      // Definitely needed if this component depends on an icon font.
+      // ltIE8Source: 'static/css/main.lt-ie8.min.css',
+
+      // Include path to compiled alternate CSS for IE8 and below.
+      // Definitely needed if this component depends on media queries.
+      // ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
+
+      // Set whether or not to include html5shiv for demoing a component.
+      // Only necessary if component patterns include new HTML5 elements
+      html5Shiv: true,
+
+      // Set whether you'd like to use a JS hack to force a redraw in the browser
+      // to avoid an IE8 bug where fonts do not appear or appear as boxes on load.
+      // ie8FontFaceHack: true,
+
+      // Set a path to a concatenated JS file that you'd like to add before the
+      // closing body tag.
+      jsBody: 'static/js/component.min.js',
+
+      // Here's a banner with some template variables.
+      // We'll be inserting it at the top of minified assets.
+      banner: grunt.file.read('./node_modules/cf-grunt-config/cfpb-banner.txt'),
     },
 
-    /**
-     * Uglify: https://github.com/gruntjs/grunt-contrib-uglify
-     * 
-     * Minify JS files.
-     * Make sure to add any other JS libraries/files you'll be using.
-     */
-    uglify: {
-      options: {
-        compress: false,
-        mangle: false,
-        beautify: true,
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd h:MM:ss TT") %> */\n'
-      },
-      vendor: {
-        files: {
-          'dist/static/js/vendor.js': [
-            'vendor/jquery/jquery.js'
-          ]
-        }
-      },
-      main: {
-        files: {
-          'dist/static/js/cf-tabs.js': [
-            'src/cf-tabs.js'
-          ]
-        }
-      },
-      demo: {
-        files: {
-          'docs/static/js/main.js': [
-            'vendor/jquery/jquery.js','src/cf-tabs.js'
-          ]
-        }
-      },
-    },
+    // Define tasks specific to this project here
 
-
-    htmlbuild: {
-      dist: {
-        src: 'src/cf-tabs.html',
-        dest: 'dist/',
-        options: {
-          beautify: true
-        }
-      }
-    },
-
-    /* 
-    * Copy is used to copy the files from the dist directory to docs and demo. 
-    * dist is the output location of the other grunt tasks
-    */
-    /*
-    copy: {
-      docs: {
-        files:
-        [{
-          expand: true,
-          cwd: 'dist/',
-          src: ['static/css/cf-tabs.css', 'static/js/cf-tabs.js', 'static/js/vendor.js'],
-          dest: 'docs'
-        }]
-      },
-      demo: {
-        files:
-        [{
-          expand: true,
-          cwd: 'dist/',
-          src: ['static/css/cf-tabs.css', 'static/js/cf-tabs.js', 'static/js/vendor.js'],
-          dest: 'demo'
-        }]
-      }
-    },
-*/
-    watch: {
-      scripts: {
-        files: ['src/*'],
-        tasks: ['build'],
-        options: {
-          spawn: false,
-        },
-      },
-    },
-
-
-    connect: {
-      server: {
-        options: {
-          port: 9001,
-          base: 'dist'
-        }
-      }
-    },
-/**
-     * JSHint: https://github.com/gruntjs/grunt-contrib-jshint
-     * 
-     * Validate files with JSHint.
-     * Below are options that conform to idiomatic.js standards.
-     * Feel free to add/remove your favorites: http://www.jshint.com/docs/#options
-     */
-    jshint: {
-      options: {
-        camelcase: false,
-        curly: true,
-        forin: true,
-        immed: true,
-        latedef: true,
-        newcap: true,
-        noarg: true,
-        quotmark: true,
-        sub: true,
-        boss: true,
-        strict: true,
-        evil: true,
-        eqnull: true,
-        browser: true,
-        plusplus: false,
-        globals: {
-          jQuery: true,
-          $: true,
-          module: true,
-          require: true,
-          define: true,
-          console: true,
-          EventEmitter: true
-        }
-      },
-      all: ['dist/static/js/cf-tabs.js']
-    },
-
-    topdoc: {
-      docs: {
-        options: {
-          source: 'dist/static/css/',
-          destination: 'docs/',
-          template: 'node_modules/cf-component-demo/code_examples/',
-          templateData: {
-            family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> docs',
-            repo: '<%= pkg.homepage %>',
-            jsBody: 'static/js/main.js'
-          }
-        }
+    concat: {
+      bodyScripts: {
+        src: [
+          'src/vendor/jquery/jquery.js',
+          'src/*.js',
+          'src/js/*.js'
+        ],
+        dest: 'demo/static/js/component.js',
       }
     }
 
+  };
 
-  });
-
-  /**
-   * The above tasks are loaded here.
-   */
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-bower-task');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-html-build');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-topdoc');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
   /**
-   * Create custom task aliases and combinations
+   * Define a function that, given the path argument, returns an object
+   * containing all JS files in that directory.
    */
-  grunt.registerTask('vendor', ['bower']);
-  //grunt.registerTask('demo', ['copy']);
-  grunt.registerTask('build', ['less', 'autoprefixer', 'uglify', 'htmlbuild']);
-  grunt.registerTask('serve', ['connect:server','watch']);
-  grunt.registerTask('default', ['build']);
+  function loadConfig(path) {
+    var glob = require('glob');
+    var object = {};
+    var key;
+
+    glob.sync('*', {cwd: path}).forEach(function(option) {
+      key = option.replace(/\.js$/,'');
+      object[key] = require(path + option);
+      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+    });
+
+    return object;
+  }
+
+
+  /**
+   * Combine the config variable defined above with the results of calling the
+   * loadConfig function with the given path, which is where our external
+   * task options get installed by npm.
+   */
+  config = extend(true, loadConfig('./node_modules/cf-grunt-config/tasks/options/'), config);
+
+  grunt.initConfig(config);
+
+
+  /**
+   * Load any project-specific tasks installed in the customary location.
+   */
+  require('load-grunt-tasks')(grunt);
+
+
+  /**
+   * Create custom task aliases for our component build workflow.
+   */
+  // grunt.registerTask('test', ['jshint', 'connect', 'qunit']);
+  grunt.registerTask('test', []);
+  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat:main', 'concat:bodyScripts']);
+  grunt.registerTask('default', ['concat:main', 'concat:bodyScripts', 'less', 'autoprefixer', 'uglify', 'test', 'copy:docs', 'topdoc']);
 
 };
