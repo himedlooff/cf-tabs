@@ -10319,41 +10319,46 @@ return jQuery;
 
     // Hide all the inactive tab panels.
     // They are not hidden by CSS for 508 compliance.
-    tabPanels.hide();
-    tabPanels.first().show().addClass('is-active');
+    tabPanels
+      .hide()
+      .first()
+      .show()
+      .addClass('is-active');
 
     // Set the first tab as the active tab.
-    tabs.first().addClass('is-active');
+    tabs
+      .first()
+      .addClass('is-active');
     
     // Set the default aria attributes to the tab list.
     tabList
-        .attr( 'role', 'tablist' );
+      .attr( 'role', 'tablist' );
     tabListItems
-        .attr( 'role', 'presentation' );
+      .attr( 'role', 'presentation' );
     tabs
-        .attr( 'role', 'tab' )
-        .attr( 'aria-selected', 'false' )
-        .attr( 'aria-expanded', 'false' )
-        .attr( 'tabindex', '-1' );
+      .attr( 'role', 'tab' )
+      .attr( 'aria-selected', 'false' )
+      .attr( 'aria-expanded', 'false' )
+      .attr( 'tabindex', '-1' );
     tabs.first()
-        .attr( 'aria-selected', 'true' )
-        .attr( 'aria-expanded', 'true' )
-        .attr( 'tabindex', '0' );
+      .attr( 'aria-selected', 'true' )
+      .attr( 'aria-expanded', 'true' )
+      .attr( 'tabindex', '0' );
 
     // Add the default aria attributes to the tab panel.
     tabPanels
-        .attr( 'role', 'tabpanel' )
-        .attr( 'aria-hidden',  'true')
-        .attr( 'tabindex', '-1' );
+      .attr( 'role', 'tabpanel' )
+      .attr( 'aria-hidden',  'true')
+      .attr( 'tabindex', '-1' );
     tabPanels.first()
-        .attr( 'aria-hidden', 'false' )
-        .attr( 'tabindex', '0' );
+      .attr( 'aria-hidden', 'false' )
+      .attr( 'tabindex', '0' );
 
     // Create IDs for each anchor for the area-labelledby.
     tabs.each( function() {
       var tabID = $( this ).attr('href').substring( 1 );
       $( this )
-        .attr( 'id','tablist-' + tabID )
+        .attr( 'id', 'tablist-' + tabID )
         .attr( 'aria-controls', tabID );
     });
 
@@ -10398,26 +10403,37 @@ return jQuery;
     });
 
     // Set keydown events on tabList item for navigating tabs.
-    $( tabList ).delegate( '.tabs_tab', 'keydown',
-      function ( e ) {
-        switch ( e.which ) {
-          case 37: case 38:
-            if ( $(this).parent().prev().length !== 0 ) {
-              $( this ).parent().prev().find('.tabs_tab').click();
-            } else {
-              $( tabsList ).find('.tabs_list-item:last .tabs_tab').click();
-            }
-            break;
-          case 39: case 40:
-            if ( $( this ).parent().next().length !==0 ) {
-              $( this ).parent().next().find('.tabs_tab').click();
-            } else {
-              $( tabsList ).find('.tabs_list-item:first .tabs_tab').click();
-            }
-            break;
-        }
+    $( tabList ).delegate( '.tabs_tab', 'keydown', function ( e ) {
+      switch ( e.which ) {
+        case 37: case 38:
+          if ( $(this).parent().prev().length !== 0 ) {
+            $( this )
+              .parent()
+              .prev()
+              .find('.tabs_tab')
+              .click();
+          } else {
+            $( tabsList )
+              .find('.tabs_list-item:last .tabs_tab')
+              .click();
+          }
+          break;
+        case 39: case 40:
+          if ( $( this ).parent().next().length !==0 ) {
+            $( this )
+              .parent()
+              .next()
+              .find('.tabs_tab')
+              .click();
+          } else {
+            $( tabsList )
+              .find('.tabs_list-item:first .tabs_tab')
+              .click();
+          }
+          break;
       }
-    );
+    });
+
   };
 
   // auto-init
