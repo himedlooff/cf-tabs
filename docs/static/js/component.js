@@ -10356,7 +10356,7 @@ return jQuery;
 
     // Create IDs for each anchor for the area-labelledby.
     tabs.each( function() {
-      var tabID = $( this ).attr('href').substring( 1 );
+      var tabID = $( this ).data('panel');
       $( this )
         .attr( 'id', 'tablist-' + tabID )
         .attr( 'aria-controls', tabID );
@@ -10374,7 +10374,7 @@ return jQuery;
       event.preventDefault();
       // The entire tabset, the parent of the clicked tab.
       var $thisTabset = $( this ).closest('.tabs');
-      var thisTabID = $( this ).attr('href');
+      var thisTabID = '#' + $( this ).data('panel');
 
       // Remove all the active classes on the tabs and panels.
       $thisTabset.find('.is-active')
