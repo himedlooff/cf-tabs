@@ -2,17 +2,16 @@ All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
 
-## 0.4.0 - 2014-08-28
+## 0.0.0 - 2014-00-00
 
 ### Added
-- Bower dependency cf-core (replaces dependencies removed, listed below)
+- Nothing.
 
 ### Deprecated
 - Nothing.
 
 ### Removed
-- Bower depencencies cf-colors, cf-forms, cf-typography, normalize
+- Nothing.
 
 ### Fixed
-- Updated npm/Bower depenencies and rebuild docs
-- Example markup and .pagination_form padding to work with updates to cf-buttons
+- Nothing.
