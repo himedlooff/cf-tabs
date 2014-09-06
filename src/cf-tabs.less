@@ -83,13 +83,14 @@
 
         &:focus {
             background-color: @green-midtone;
-            outline: 1px dotted @pacific;
             color: @black;
+            outline: 1px dotted @green;
+            outline-offset: 1px;
         }
 
         &.is-active:hover {
-            background-color: @green-midtone;
             border-bottom-width: 0;
+            background-color: @green-midtone;
         }
     }
 
@@ -97,7 +98,8 @@
         padding-top: unit(15px / @base-font-size-px, em);
 
         &:focus {
-            outline: 1px dotted @pacific;
+            outline: 1px dotted @green;
+            outline-offset: 1px;
         }
     }
 }
