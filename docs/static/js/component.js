@@ -10413,7 +10413,7 @@ return jQuery;
               .find('.tabs_tab')
               .click();
           } else {
-            $( tabsList )
+            $( tabList )
               .find('.tabs_list-item:last .tabs_tab')
               .click();
           }
@@ -10426,7 +10426,7 @@ return jQuery;
               .find('.tabs_tab')
               .click();
           } else {
-            $( tabsList )
+            $( tabList )
               .find('.tabs_list-item:first .tabs_tab')
               .click();
           }
