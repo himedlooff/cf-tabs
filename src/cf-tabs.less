@@ -75,22 +75,19 @@
         text-decoration: none;
 
         &:hover,
-        &.is-active {
+        &:focus {
             border: none;
-            background-color: @green;
-            color: @white;
+            background-color: @green-midtone;
         }
 
         &:focus {
-            background-color: @green-midtone;
-            color: @black;
             outline: 1px dotted @green;
             outline-offset: 1px;
         }
 
-        &.is-active:hover {
-            border-bottom-width: 0;
-            background-color: @green-midtone;
+        &.is-active {
+            background-color: @green;
+            color: @white;
         }
     }
 
