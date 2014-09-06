@@ -1,52 +1,46 @@
-cf-tabs
-=======
+# cf-tabs
 
-# The Capital Framework Tabset
+Keyboard and screen reader friendly tab sets.
+This component can be used by itself, but it was made for Capital Framework,
+a new front end framework developed at the
+[Consumer Financial Protection Bureau](https://cfpb.github.io/).
 
-http://cfpb.github.io/cf-tabs/
+- [View the docs](https://cfpb.github.io/cf-tabs/docs/)
+- [See the raw demo](https://cfpb.github.io/cf-tabs/demo/)
 
+The current version number can be found in [bower.json](bower.json#L3)
+and follows [Semantic Versioning 2.0](http://semver.org/).
+Release notes are recorded in the [CHANGELOG](CHANGELOG.md) and on the
+[Releases page](https://github.com/cfpb/cf-tabs/releases/).
 
-
-This component can be used by itself, but it was made for Capital Framework, a new front end framework
-developed at the [Consumer Financial Protection Bureau](http://cfpb.github.io/).
-
-If you would like to take advantage of more components or if you're new to Capital Framework,
-we encourage you to [start here](https://github.com/cfpb/capital-framework). (Coming soon.)
-
-- [View the docs](http://cfpb.github.io/cf-tabs/docs/)
-- [See the raw demo](http://cfpb.github.io/cf-tabs/dist/cf-tabs.html)
-
-(Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).)
+If you would like to take advantage of more components or if you're new to
+Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
 
 
-## Contributing
+## How to use this component
+
+Detailed instructions can be found in the Capital Framework
+[documentation site](https://cfpb.github.io/capital-framework/components/).
+
+
+## Getting involved
 
 We welcome your feedback and contributions.
 
-- [Find out about contributing](https://github.com/cfpb/cf-tabs/blob/gh-pages/CONTRIBUTING.md)
-- [File a bug](https://github.com/cfpb/cf-tabs/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
+- [Find out about contributing](CONTRIBUTING.md)
+- File a bug using this [handy template](https://github.com/cfpb/cf-tabs/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
 
-## Building the component
+---
 
-### Requirements
-
-- [npm](https://npmjs.org/)
-- [grunt-cli](http://gruntjs.com/getting-started)
-- That's it! NPM will help you install everything else you need.
-
-### Workflow
-
-1. Clone the repo and `cd` into its root
-2. `npm install` – Initializes Grunt in this folder and installs dependencies.
-3. `grunt vendor` – Pulls in Bower components.
-4. `grunt` – Compiles LESS files and generates the docs and demo pages.
+## Open source licensing info
+1. [TERMS](TERMS.md)
+2. [LICENSE](LICENSE)
+3. [CFPB Source Code Policy](https://github.com/cfpb/source-code-policy/)
 
 
-## Using this component independent of Capital Framework
+---
 
-If you're already using [Bower](http://bower.io/), simply add this component as a dependency
-and integrate it into your build process.
-It's not currently in the Bower registry, so you'll have to point to this Git repo's URL.
+## Credits and references
 
-You can also just view the CSS in the `demo` folder and snag what you want.
+Docs and demo built with the excellent [Topdoc](https://github.com/topcoat/topdoc/).
