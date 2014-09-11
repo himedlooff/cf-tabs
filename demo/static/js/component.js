@@ -10354,7 +10354,7 @@ return jQuery;
       .attr( 'aria-hidden', 'false' )
       .attr( 'tabindex', '0' );
 
-    // Create IDs for each anchor for the area-labelledby.
+    // Create IDs for each anchor for the aria-labelledby.
     tabs.each( function() {
       var tabID = $( this ).data('panel');
       $( this )

@@ -17,6 +17,12 @@
     </div>
     <div id="tabs" class="docs-component">
       <h2 class="docs-component_header"><span>Tabs</span></h2>
+      <div class="docs-component_intro">
+        <ul class="docs-notes">
+          <li>Each .tabs_tab must contain a [data-panel] attribute that matches the ID of the panel it controls.</li>
+          <li>ID's are required for each .tabs_panel for the reason stated above and are also used to dynamically set aria attributes like [aria-labeledby] for accessibility.</li>
+        </ul>
+      </div>
       <div class="docs-patterns">
         <div class="docs-pattern">
           <h3 class="docs-pattern_header">Default tabs pattern</h3>
