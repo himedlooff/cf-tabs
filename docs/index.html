@@ -19,8 +19,7 @@
       <h2 class="docs-component_header"><span>Tabs</span></h2>
       <div class="docs-component_intro">
         <ul class="docs-notes">
-          <li>Each .tabs_tab must contain a [data-panel] attribute that matches the ID of the panel it controls.</li>
-          <li>ID's are required for each .tabs_panel for the reason stated above and are also used to dynamically set aria attributes like [aria-labeledby] for accessibility.</li>
+          <li>The JavaScript for this component will add  any necessary `role`, `aria`, and `tabindex` attributes needed to make these tabs accessible. All that you need to do is follow the markup pattern that you see below; do NOT use 'view source'.</li>
         </ul>
       </div>
       <div class="docs-patterns">
@@ -98,6 +97,10 @@
            asperiores officiis minus eius animi?&lt;/p&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
+            <ul class="docs-notes">
+              <li>Each .tabs_tab must contain a [data-panel] attribute that matches the ID of the panel it controls.</li>
+              <li>ID's are required for each .tabs_panel for the reason stated above and are also used to dynamically set aria attributes like [aria-labeledby] for accessibility.</li>
+            </ul>
           </footer>
         </div>
       </div>
